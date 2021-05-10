@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#sidebar{
+    background: black;
+    height: 100vh;
+    color:gray;
+}
+#main-content{
+    background: rgb(37,70,110);
+    background: linear-gradient(137deg, rgba(37,70,110,1) 0%, rgba(4,7,11,1) 100%);
+    height: 100vh;
+    }
+#main-content-nav .nav .nav-item .nav-link{
+    color: white;
+}
+.main-content-header{
+    color: white;
+    font-weight: bolder;
+}
+.card{
+    border: transparent;
+    background: transparent;
+    color: white;
+    font-weight: bolder;
+}
+#sign-up-btn{
+    border-radius: 15px;
+
+}
+#login-btn{
+    border-radius: 15px;
+    border: 2px solid white;
+}
+
+.sidebar-component{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+#home:hover,
+#search:hover,
+#library:hover {
+  color: white;
+}
+
+.sidebar-buttons{
+    display: flex;
+    align-items: flex-end;
+    
+
+}
+
+#footer{
+    background:#2c2c2c;
+    }
+
+.player-icons{
+    color: white;
+    margin-bottom: 10px;
+}
