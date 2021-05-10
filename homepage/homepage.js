@@ -1,4 +1,5 @@
 window.onload = function () {
+  // if you need to add extra cards, just create a new object in this array.
   let cards = [
     {
       img: "./images/karaoke-pic.jpg",
@@ -24,6 +25,7 @@ window.onload = function () {
       img: "./images/karaoke-pic.jpg",
       title: "Italian Karaoke",
     },
+    // or modify existsing objects to display different things.
   ];
   let papa = document.getElementById("append-cards-here");
   let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex"];
