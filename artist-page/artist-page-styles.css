@@ -1,4 +1,5 @@
 #artist-bg-img {
+  width: 100%;
   background-image: linear-gradient(
       to bottom,
       rgba(24, 24, 24, 0),
