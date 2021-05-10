@@ -1,0 +1,22 @@
+/* 
+Here we will write global styles.
+import it in your own css by inserting the following code:
+
+-----------------------------------------------------------
+>>>>>>>>>> @import url(../global-styles.css); <<<<<<<<<<<<<
+-----------------------------------------------------------
+
+We will use it for things like fonts, maybe animations.
+*/
+
+@import url(./keyframes.css); /* importing animation keyframes */
+
+/* 
+Here's an example animation
+apply the class='slideInLeft' to the element and it will slide :)
+*/
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
