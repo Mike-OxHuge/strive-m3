@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#login {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  color: white;
+  background-color: black;
+}
+#album-component {
+  height: 140vh;
+  background-color: rgb(31, 30, 30);
+}
+.login-componenet {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: rgb(184, 184, 184);
+}
+#firstOptions {
+  margin-top: 50px;
+  font-size: 17px;
+  color: rgb(184, 184, 184);
+}
+#home:hover,
+#search:hover,
+#library:hover,
+#install:hover {
+  color: white;
+}
+hr {
+  background: rgb(128, 128, 128);
+}
+
+#install {
+  position: absolute;
+  bottom: 100px;
+}
+#user {
+  position: absolute;
+  bottom: 80px;
+}
+#user-name {
+  color: white;
+  margin-left: 5px;
+}
+#artist-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#artist-infos img {
+  height: 300px;
+  background-size: cover;
+}
+.album-container {
+  width: 100%;
+  margin: 20px auto;
+  color: white;
+}
+small {
+  color: gray;
+  margin: 10px 0 10px 0;
+}
+#Options {
+  display: flex;
+  align-items: center;
+}
+#more {
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.fa-heart {
+  margin-right: 10px;
+  cursor: pointer;
+}
+#play-button {
+  padding: 5px 30px 5px 30px;
+  border-radius: 67px;
+  outline: none;
+  border: none;
+  background-color: rgb(88, 230, 88);
+  color: white;
+}
+#play-button:hover {
+  background-color: rgb(132, 236, 132);
+  color: black;
+}
+#songs {
+  margin-top: 30px;
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+#songs-container {
+  display: flex;
+  flex-direction: column;
+}
+i.fas {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.fas {
+  cursor: pointer;
+}
+.play-button-media {
+  font-size: 30px;
+  padding-top: 10px;
+}
+.progress-bar {
+  background-color: #8a8a8a !important;
+}
+.palyer {
+  height: 80px;
+  background-color: rgb(41, 41, 41);
+  color: white;
+}
+
+input[type='range'] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */ /* Specific width is required for Firefox. */
+  background: gray; /* Otherwise white in Chrome */
+  border-radius: 10px;
+  height: 5px;
+  margin-top: 10px;
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #8a8a8a;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+input[type='range']:hover {
+  background: #39913c;
+}
