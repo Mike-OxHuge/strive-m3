@@ -11,7 +11,7 @@ window.onload = function () {
     },
     {
       img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      title: "000's Italy",
     },
     {
       img: "./images/karaoke-pic.jpg",
