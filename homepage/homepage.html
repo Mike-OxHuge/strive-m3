@@ -34,6 +34,11 @@
               width="150px"
             />
           </div>
+
+          <!-- next time use semantic tags. <aside> fits perfectly.
+            you still can assign any classes to it, because it's the same
+          as any other <div>, it just makes code slightly better. 
+            however this element will be replaced by the one that aymane is doing -->
           <div id="sidebar-options">
             <div class="sidebar-component" id="home">
               <i class="fas fa-home"></i>Home
@@ -81,79 +86,8 @@
             <h1>#ThorwbackThursday</h1>
           </div>
           <div class="container">
-            <div class="row">
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/karaoke-pic.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Italian Karaoke</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/liricisti.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Lyricists</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/karaoke-pic.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Italian Karaoke</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/karaoke-pic.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Italian Karaoke</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/karaoke-pic.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Italian Karaoke</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div class="card img-fluid">
-                  <img
-                    src="/homepage/images/karaoke-pic.jpg"
-                    class="card-img-top"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <p class="card-text">Italian Karaoke</p>
-                  </div>
-                </div>
-              </div>
+            <div class="row" id="append-cards-here">
+              <!-- all the cards are going here -->
             </div>
           </div>
           <div class="container main-content-header">
@@ -212,6 +146,8 @@
             </div>
           </div>
         </div>
+
+        <!-- footer will be replaced by the one what aymane doing -->
         <div id="footer" class="container-fluid">
           <div class="container">
             <div class="row">
@@ -230,7 +166,8 @@
         </div>
       </div>
     </div>
-
+    <!-- my js -->
+    <script src="./homepage.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
