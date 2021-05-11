@@ -36,8 +36,8 @@
 .active-border::after {
   content: "";
   position: absolute;
-  height: 3px;
-  background: #0dce0d;
+  height: 0.2em;
+  background: #0caf0c;
   top: 100%;
   width: 30%;
   left: 50%;
