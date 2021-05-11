@@ -21,3 +21,11 @@
   font-weight: 700;
   font-size: 0.7rem;
 }
+
+.clickable-spans span {
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 0 10px;
+  padding: 5px 15px;
+}
