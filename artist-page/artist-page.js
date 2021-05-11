@@ -1,5 +1,6 @@
 window.onload = function () {
   let appendAlbums = document.getElementById("append-albums");
+  let theTitle = document.getElementById("the-title");
 
   let albums = [
     {
@@ -110,11 +111,12 @@ window.onload = function () {
       `,
     },
   ];
-
+  let gridClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2"];
   // default view
   for (let i = 0; i < albums.length; i++) {
     let div = document.createElement("div");
-    div.classList.add("col-2", "overview");
+    div.classList.add(...gridClasses);
+    div.classList.add("overview");
     div.innerHTML = `
       <img
                 src="./images/queen-album-cover-${i + 1}.jpg"
@@ -129,6 +131,7 @@ window.onload = function () {
               </div>
       `;
     appendAlbums.appendChild(div);
+    document.getElementById("overview").classList.add("active-border");
   }
 
   // onclick on overview clearing inner html and appening children
@@ -136,7 +139,8 @@ window.onload = function () {
     appendAlbums.innerHTML = "";
     for (let i = 0; i < albums.length; i++) {
       let div = document.createElement("div");
-      div.classList.add("col-2", "overview");
+      div.classList.add(...gridClasses);
+      div.classList.add("overview");
       div.innerHTML = `
         <img
                   src="./images/queen-album-cover-${i + 1}.jpg"
@@ -152,6 +156,12 @@ window.onload = function () {
         `;
       appendAlbums.appendChild(div);
     }
+    theTitle.innerText = "Albums";
+    document.getElementById("overview").classList.add("active-border");
+    document
+      .getElementById("related-artists")
+      .classList.remove("active-border");
+    document.getElementById("about").classList.remove("active-border");
   };
 
   // onclick on related artists clearing inner html and appening children
@@ -159,7 +169,8 @@ window.onload = function () {
     appendAlbums.innerHTML = "";
     for (let i = 0; i < artists.length; i++) {
       let div = document.createElement("div");
-      div.classList.add("col-2", "related-artists");
+      div.classList.add(...gridClasses);
+      div.classList.add("related-artists");
       div.innerHTML = `
         <img
                   src="${artists[i].img}"
@@ -175,6 +186,10 @@ window.onload = function () {
         `;
       appendAlbums.appendChild(div);
     }
+    theTitle.innerText = "Related Artists";
+    document.getElementById("overview").classList.remove("active-border");
+    document.getElementById("related-artists").classList.add("active-border");
+    document.getElementById("about").classList.remove("active-border");
   };
 
   // onclick on about clearing inner html and appening children
@@ -199,5 +214,11 @@ window.onload = function () {
       `;
       appendAlbums.appendChild(div);
     }
+    theTitle.innerText = "About";
+    document.getElementById("overview").classList.remove("active-border");
+    document
+      .getElementById("related-artists")
+      .classList.remove("active-border");
+    document.getElementById("about").classList.add("active-border");
   };
 };
