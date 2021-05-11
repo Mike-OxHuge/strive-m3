@@ -60,12 +60,12 @@
           <div class="col-10" id="album-component">
             <div class="album-container">
               <div class="row">
-                <div class="col-12 col-md-6" id="artist-infos">
+                <div class="col-6" id="artist-infos">
                   <img
                     src="https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.f3noMS6U/SharedImage-53612.jpg?t=1a8ff15292f3d96da274"
                     alt="queenImg"
                   />
-                  <h3>Queen II (Delux Edition 2011 Remaster)</h3>
+                  <h3>Queen II (Deluxe Edition 2011 Remaster)</h3>
                   <small>queen</small>
                   <button id="play-button">PLAY</button>
                   <small>1974 . 16 SONGS</small>
@@ -74,7 +74,9 @@
                     <span id="more">...</span>
                   </div>
                 </div>
-                <div class="col-12 col-md-6" id="songs-container"></div>
+                <div class="col-6" id="songs-container">
+                  <!-- songs going here -->
+                </div>
               </div>
             </div>
           </div>
@@ -152,11 +154,11 @@
       </div>
     </div>
 
-    <script>
+    <!-- <script>
       (() => {
         for (let index = 0; index < 15; index++) {
           document.getElementById(
-            'songs-container'
+            "songs-container"
           ).innerHTML += `<div id="songs">
                     <div class="d-flex">
                       <div><i class="fas fa-music"></i></div>
@@ -169,8 +171,8 @@
                   </div>`;
         }
       })();
-    </script>
-
+    </script> -->
+    <script src="./album-page.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
