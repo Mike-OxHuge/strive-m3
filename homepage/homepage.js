@@ -87,3 +87,14 @@ for (let i = 0; i < cardsTwo.length; i++) {
   mamma.appendChild(div);
 }
 }
+
+/* below here adding a function for main content links to change display according to the link name*/
+
+// let podcast = document.getElementById("podcast")
+
+// podcast.onclick = function(event){
+//   let allRefs = document.getElementsByClassName("main-content-trending, main-content-moods, main-content-new-releases, main-content-discover ")
+//   for(let classes of allRefs)(
+//     classes += allRefs.classList.add("cards-changer")
+//   )
+// }
