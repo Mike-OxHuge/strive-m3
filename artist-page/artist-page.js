@@ -111,7 +111,7 @@ window.onload = function () {
       `,
     },
   ];
-  let gridClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2"];
+  let gridClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "px-1"];
   // default view
   for (let i = 0; i < albums.length; i++) {
     let div = document.createElement("div");
@@ -123,9 +123,9 @@ window.onload = function () {
                 alt=""
                 class="fluid w-100"
               />
-              <div class="text-center mb-4" style="line-height: 0.1rem">
+              <div class="text-center mb-4 mt-1" style="line-height: 0.1rem">
                 <h6 class="text-white">${albums[i].title}</h6>
-                <span class="text-muted" style="font-size: 0.7rem">${
+                <span class="text-muted pt-n2" style="font-size: 0.7rem">${
                   albums[i].subtitle
                 }</span>
               </div>
@@ -140,16 +140,16 @@ window.onload = function () {
     for (let i = 0; i < albums.length; i++) {
       let div = document.createElement("div");
       div.classList.add(...gridClasses);
-      div.classList.add("overview");
+      div.classList.add("overview", "fadeIn");
       div.innerHTML = `
         <img
                   src="./images/queen-album-cover-${i + 1}.jpg"
                   alt=""
                   class="fluid w-100"
                 />
-                <div class="text-center mb-4" style="line-height: 0.1rem">
+                <div class="text-center mb-4 mt-1" style="line-height: 0.1rem">
                   <h6 class="text-white">${albums[i].title}</h6>
-                  <span class="text-muted" style="font-size: 0.7rem">${
+                  <span class="text-muted pt-n2" style="font-size: 0.7rem">${
                     albums[i].subtitle
                   }</span>
                 </div>
@@ -170,16 +170,16 @@ window.onload = function () {
     for (let i = 0; i < artists.length; i++) {
       let div = document.createElement("div");
       div.classList.add(...gridClasses);
-      div.classList.add("related-artists");
+      div.classList.add("related-artists", "fadeIn");
       div.innerHTML = `
         <img
                   src="${artists[i].img}"
                   alt=""
-                  class="fluid w-100"
+                  class="fluid w-100 h-50"
                 />
-                <div class="text-center mb-4" style="line-height: 0.1rem">
+                <div class="text-center mb-4 mt-1" style="line-height: 0.1rem">
                   <h6 class="text-white">${artists[i].band}</h6>
-                  <span class="text-muted" style="font-size: 0.7rem">
+                  <span class="text-muted pt-n2" style="font-size: 0.7rem">
                   <a href=${artists[i].url}>Learn more</a>
                   </span>
                 </div>
@@ -197,20 +197,24 @@ window.onload = function () {
     appendAlbums.innerHTML = "";
     for (let i = 0; i < queen.length; i++) {
       let div = document.createElement("div");
-      div.classList.add("col-12", "d-flex", "about");
+      div.classList.add("col-12", "d-flex", "about", "fadeIn");
       div.innerHTML = `
-      <img
-                src="${queen[i].img}"
-                alt=""
-                class="fluid w-50 h-50"
-              />
-              <div class="text-center mb-4">
+      <div class='row mb-5'>
+      
+        <div class='col-6'>
+          <img src="${queen[i].img}"
+            alt=""
+            class="img-fluid" />              
+        </div>
+      
+              <div class="text-center mb-4 col-6">
                 <h6 class="text-white">${queen[i].title}</h6>
                 <span class="text-muted" style="font-size: 0.7rem">
                 ${queen[i].subtitle}
                 </span>
-                <p>${queen[i].description}</p>
+                <p class='text-white'>${queen[i].description}</p>
               </div>
+        </div>
       `;
       appendAlbums.appendChild(div);
     }
