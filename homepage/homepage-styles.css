@@ -42,12 +42,9 @@ span {
     font-weight: bolder;
     cursor: pointer;
 }
+
 #main-content-nav .nav .nav-item .nav-link:hover{
     color: white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid #0caf0c;
 
 }
 /* .main-content-header{
@@ -67,7 +64,13 @@ span {
     margin-left: 60px;
 
 }
-/* .active-border::after {
+.underline {
+
+    position:relative;
+  
+  }
+  
+  .underline:hover::after{
     content: "";
     position: absolute;
     height: 0.2em;
@@ -76,7 +79,8 @@ span {
     width: 30%;
     left: 50%;
     transform: translateX(-50%);
-  } */
+  } 
+  
 
 .card{
     border: transparent;
@@ -84,6 +88,7 @@ span {
     color: white;
     font-weight: bolder;
     font-size: 0.7rem;
+    
 }
 #sign-up-btn{
     border-radius: 15px;
