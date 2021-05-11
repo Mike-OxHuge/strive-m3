@@ -11,6 +11,20 @@ We will use it for things like fonts, maybe animations.
 
 @import url(./keyframes.css); /* importing animation keyframes */
 
+/* importing fonts */
+@import url(//db.onlinewebfonts.com/c/01173b246d9d9ea808ea75a26b3b61bb?family=Circular+Spotify+Tx+T+Black);
+
+/* giving this font to all the text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: "Circular Spotify Tx T Black" !important;
+}
 /* 
 Here's an example animation
 apply the class='slideInLeft' to the element and it will slide :)
