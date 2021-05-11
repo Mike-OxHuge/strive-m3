@@ -10,8 +10,8 @@ window.onload = function () {
       title: "Lyricists",
     },
     {
-      img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      img: "./images/italia.jpg",
+      title: "000's Italy",
     },
     {
       img: "./images/karaoke-pic.jpg",
@@ -28,7 +28,7 @@ window.onload = function () {
     // or modify existsing objects to display different things.
   ];
   let papa = document.getElementById("append-cards-here");
-  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex"];
+  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"];
   for (let i = 0; i < cards.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
