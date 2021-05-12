@@ -84,12 +84,21 @@ span {
 
 #sign-up-btn{
     border-radius: 15px;
-
+    margin-bottom: 10px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bolder;
 }
 #login-btn{
     border-radius: 15px;
     border: 2px solid white;
     letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bolder;
 }
 
 .sidebar-component{
@@ -116,4 +125,6 @@ span {
     color: white;
     margin-bottom: 10px;
 }
+
+
 

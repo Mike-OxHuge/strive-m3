@@ -15,13 +15,14 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link
+    <link 
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="homepage-styles.css" />
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="../artist-page/artist-page-styles.css"/>
+    <link rel="stylesheet" href="../album-page/album-page-styles.css"/>
+    <link rel="stylesheet" href="homepage-styles.css"/>
   </head>
   <body style="background: #181818; min-width: 100vw">
     <div class="row ml-0" style="max-width: 100vw">
@@ -84,33 +85,18 @@
 
           <!-- install app, hr, user -->
           <div>
-            <div
-              class="
-                list-group list-group-flush
-                d-flex
-                mb-2
-                mt-auto
-                pl-2
-                align-self-baseline
-              "
-            ></div>
+            <div class="list-group list-group-flush d-flex mb-2 mt-auto pl-2 align-self-baseline">
+              <button id="sign-up-btn" type="button" class="block bg-light py-1">Sign Up</button>
+              <button id="login-btn" type="button" class="block bg-dark py-1">Login</button>
+            </div>
             <hr />
             <div class="d-flex" style="align-items: center">
-              <img
-                src="https://picsum.photos/50/50?random=1"
-                alt=""
-                style="border-radius: 50px"
-              />
-              <p class="mb-0 pl-3">User 'The' Awesome</p>
+              <p class="mb-0 pl-3 text-muted" style="border-right: 1px solid gray;  margin-right: 5px;">Cookie</p><span class="text-muted " style="margin-left: 5px;">Privacy Policy</span>
             </div>
           </div>
         </div>
       </aside>
-      <div
-        class="col-10 px-0"
-        style="max-width: 100%; padding-bottom: 7rem"
-        id="main-content"
-      >
+      <div class="col-10 px-0" style="max-width: 100%; padding-bottom: 7rem" id="main-content">
         <div id="main-content-nav" class="container">
           <div class="col d-flex" style="justify-content: center">
             <ul class="nav">
@@ -157,19 +143,19 @@
             </ul>
           </div>
         </div>
-        <div class="container main-content-header">
+        <div class="container main-content-header d-flex">
           <h1>#THROWBACKTHURSDAY</h1>
         </div>
         <div class="container">
-          <div class="row" id="append-cards-here">
+          <div class="row d-flex" id="append-cards-here">
             <!-- all the  first cards are going here -->
           </div>
         </div>
-        <div class="container main-content-header">
+        <div class="container main-content-header d-flex" style="max-width: 100%;">
           <h1>Classificie</h1>
         </div>
-        <div class="container" style="margin-left: 75px">
-          <div class="row" id="append-mamma-here">
+        <div class="container d-flex" style="max-width: 100%; margin-left: 75px">
+          <div class="row d-flex " id="append-mamma-here">
             <!-- all the second cards are going here -->
           </div>
         </div>
@@ -183,20 +169,9 @@
             <div class="row">
               <!-- This row is created to make the text and the images aligned -->
               <div class="col-3 pr-0">
-                <img
-                  src="../sbar-ftr-images/horace.jpeg"
-                  alt="music name"
-                  style="width: 50px; height: 50px"
-                />
+               
               </div>
-              <div class="col-6 pl-0">
-                <h6 class="song-name">Song For My Father</h6>
-                <p class="artist-name">Horace Silver</p>
-              </div>
-              <div class="col-3">
-                <i class="far fa-heart"></i>
-                <i class="far fa-window-maximize"></i>
-              </div>
+              
             </div>
           </div>
           <div class="col-1"></div>
@@ -233,8 +208,6 @@
           <div class="col-3 d-flex" style="justify-content: flex-end">
             <!-- This div is for playlist icon speaker and the volume icon with the progress bar -->
             <div class="row mt-4">
-              <i class="fas fa-bars"></i>
-              <i class="fas fa-mobile-alt"></i>
               <i class="fas fa-volume-down"></i>
               <input
                 type="range"
