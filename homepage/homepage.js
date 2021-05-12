@@ -155,7 +155,7 @@ let cardsTrending = [
 
 // append throwbackThursday Cards
   let papa = document.getElementById("append-cards-here");
-  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex",];
+  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "px-1"];
   for (let i = 0; i < cards.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -166,7 +166,7 @@ let cardsTrending = [
 
 // append Classifichie album covers
 let mamma = document.getElementById("append-mamma-here")
-let listOfMammaClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex",]
+let listOfMammaClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "px-1"]
 for (let i = 0; i < cardsTwo.length; i++) {
   let div = document.createElement("div");
   div.classList.add(...listOfMammaClasses);
