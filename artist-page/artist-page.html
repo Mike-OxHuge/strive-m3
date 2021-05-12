@@ -25,20 +25,21 @@
 
     <title>Artist page</title>
   </head>
-  <body style="background: #181818; max-width: 100vw">
-    <div class="row ml-0" style="max-width: 100%">
-      <div class="col-2 d-block px-0" id="login" style="max-width: 100%">
+  <body style="background: #181818; min-width: 100vw">
+    <div class="row ml-0">
+      <div class="col-2 d-block d-flex px-0" id="login" style="max-width: 100%">
         <div class="sidebar-heading">
-          <div class="navbar-brand">
+          <div class="navbar-brand d-flex justify-content-center mx-auto">
             <img
               id="spotLogo"
-              class="img-fluid"
+              class="img-fluid my-3"
               src="../sbar-ftr-images/Spotify_Logo_CMYK_Black.png"
               alt="Spotify Logo White"
             />
           </div>
-        </div>
-        <div class="list-group list-group-flush">
+          </div>
+        
+        <div class="list-group list-group-flush d-flex mt-2 mb-auto pl-2">
           <a
             class="
               list-group-item list-group-item-action
@@ -84,12 +85,14 @@
             <img src="../sbar-ftr-images/library-v2.png" alt="" class="icon" />
             <span class="h6 mb-0">Your Library</span>
           </a>
+          </div>
+          <div class="list-group list-group-flush d-flex mb-2 mt-auto pl-2 align-self-baseline">
           <a
             class="
               list-group-item list-group-item-action
               bg-transparent
               text-white
-              align-items-center align-self-baseline
+              align-items-center
               d-flex
               pl-1
               py-2
@@ -97,8 +100,9 @@
             href="#!"
           >
             <i class="fal fa-arrow-circle-down fa-lg px-1"></i>
-            <span class="h6">Install App</span>
+            <span class="h6 mb-0">Install App</span>
           </a>
+        </div>
         </div>
       </div>
 
