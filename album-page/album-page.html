@@ -124,75 +124,79 @@
       </div>
     </main>
     <!-- player -->
-    <div class="palyer fixed-bottom">
-      <div class="container-fluid">
-        <div class="row">
-          <!-- Creating the dive for different parts of the player -->
-          <div class="col-3 left-side mt-4">
-            <!-- This div is for song name and the image with heart icon and fullscreenicon -->
-            <div class="row">
-              <!-- This row is created to make the text and the images aligned -->
-              <div class="col-3 pr-0">
-                <img src="https://picsum.photos/40/40" alt="music name" />
-              </div>
-              <div class="col-6 pl-0">
-                <h6 class="song-name">Bohemian Rhapsody</h6>
-                <p class="artist-name">Queen</p>
-              </div>
-              <div class="col-3">
-                <i class="far fa-heart"></i>
-                <i class="far fa-window-maximize"></i>
-              </div>
-            </div>
-          </div>
-          <div class="col-6">
-            <!-- This div is for the media player consisting of the buttons like shuffle 
-                      back forward play and loop with the progress-bar -->
-            <div class="row mb-1">
-              <!-- This row is to create the icons for the media player -->
-              <div class="col text-center align-self-center player-icons">
-                <i class="fas fa-random"></i>
-                <i class="fas fa-step-backward"></i>
-                <i class="fas fa-play-circle play-button-media"></i>
-                <i class="fas fa-step-forward"></i>
-                <i class="fas fa-redo"></i>
-              </div>
-            </div>
-            <div class="row mt-3">
-              <!-- This row is for the progress bar of the song -->
-              <div class="col">
-                <div class="progress" style="height: 5px">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    style="width: 10%"
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-3">
-            <!-- This div is for playlist icon speaker and the volume icon with the progress bar -->
-            <div class="row mt-4">
-              <i class="fas fa-bars"></i>
-              <i class="fas fa-mobile-alt"></i>
-              <i class="fas fa-volume-down"></i>
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="slider"
-                id="myRange"
+    <footer class="player fixed-bottom">
+      <div class="row mx-2" style="height: 100%; align-content: center">
+        <!-- Creating the dive for different parts of the player -->
+        <div class="col-3 left-side mt-4">
+          <!-- This div is for song name and the image with heart icon and fullscreenicon -->
+          <div class="row">
+            <!-- This row is created to make the text and the images aligned -->
+            <div class="col-3 pr-0">
+              <img
+                src="./images/horace.jpeg"
+                alt="music name"
+                style="width: 50px; height: 50px"
               />
+            </div>
+            <div class="col-6 pl-0">
+              <h6 class="song-name">Song For My Father</h6>
+              <p class="artist-name">Horace Silver</p>
+            </div>
+            <div class="col-3">
+              <i class="far fa-heart"></i>
+              <i class="far fa-window-maximize"></i>
             </div>
           </div>
         </div>
+        <div class="col-1"></div>
+        <div class="col-4">
+          <!-- This div is for the media player consisting of the buttons like shuffle 
+                      back forward play and loop with the progress-bar -->
+          <div class="row mb-1">
+            <!-- This row is to create the icons for the media player -->
+            <div class="col text-center align-self-center player-icons">
+              <i class="fas fa-random"></i>
+              <i class="fas fa-step-backward"></i>
+              <i class="fas fa-play-circle play-button-media"></i>
+              <i class="fas fa-step-forward"></i>
+              <i class="fas fa-redo"></i>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <!-- This row is for the progress bar of the song -->
+            <div class="col">
+              <div class="progress" style="height: 5px">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="75"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 10%"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3 d-flex" style="justify-content: flex-end">
+          <!-- This div is for playlist icon speaker and the volume icon with the progress bar -->
+          <div class="row mt-4">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-mobile-alt"></i>
+            <i class="fas fa-volume-down"></i>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
     <script src="./album-page.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
