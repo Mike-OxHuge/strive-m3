@@ -1,5 +1,5 @@
 window.onload = function () {
-  // if you need to add extra cards, just create a new object in this array.
+  // All arrays containing cards for main-content page
   let cards = [
     {
       img: "./images/karaoke-pic.jpg",
@@ -25,27 +25,10 @@ window.onload = function () {
       img: "./images/90s.jpg",
       title: "I Love My '90s Hip-Hop",
     },
-    // or modify existsing objects to display different things.
   ];
-  let papa = document.getElementById("append-cards-here");
-  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"];
-  for (let i = 0; i < cards.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `
-    <div class="card img-fluid">
-    <img
-      src=${cards[i].img}
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <p class="card-text">${cards[i].title}</p>
-    </div>
-  </div>
-    `;
-    papa.appendChild(div);
-  }
+
+  // second cards 
+
   let cardsTwo = [
     {
       img: "./images/top50it.jpg",
@@ -65,27 +48,194 @@ window.onload = function () {
     },
 
   ];
+// cards Trending
+let cardsTrending = [
+  {
+    img: "./images/love.jpg",
+    title: "Top 50 - Italy",
+  },
+  {
+    img: "./images/dolla.jpg",
+    title: "Top 50 - Global",
+  },
+  {
+    img: "./images/nobody.jpg",
+    title: "Viral 50 - Global",
+  },
+  {
+    img: "./images/bad.jpg",
+    title: "Viral 50 - Italy",
+  },
 
+];
+// cards Podcast
+  let cardsPodcast = [
+    {
+      img: "./images/joe.jpg",
+      title: "The Joe Rogan Experi...",
+    },
+    {
+      img: "./images/vibrators.jpg",
+      title: "Top 50 - Global",
+    },
+    {
+      img: "./images/onion.jpg",
+      title: "Viral 50 - Global",
+    },
+    {
+      img: "./images/hard.jpg",
+      title: "Viral 50 - Italy",
+    },
 
+  ];
+// cards Moods & genres
+
+  let cardsMoods = [
+    {
+      img: "./images/tens.jpg",
+      title: "Top 50 - Italy",
+    },
+    {
+      img: "./images/easy00.jpg",
+      title: "Top 50 - Global",
+    },
+    {
+      img: "./images/perfect.jpg",
+      title: "Viral 50 - Global",
+    },
+    {
+      img: "./images/pop.jpg",
+      title: "Viral 50 - Italy",
+    },
+
+  ];
+
+  // cards New releases
+
+  let cardsNew = [
+    {
+      img: "./images/top50it.jpg",
+      title: "Top 50 - Italy",
+    },
+    {
+      img: "./images/liricisti.jpg",
+      title: "Top 50 - Global",
+    },
+    {
+      img: "./images/italia.jpg",
+      title: "Viral 50 - Global",
+    },
+    {
+      img: "./images/viral50.jpg",
+      title: "Viral 50 - Italy",
+    },
+
+  ];
+    // cards discover
+
+    let cardsDiscover = [
+      {
+        img: "./images/top50it.jpg",
+        title: "Top 50 - Italy",
+      },
+      {
+        img: "./images/liricisti.jpg",
+        title: "Top 50 - Global",
+      },
+      {
+        img: "./images/italia.jpg",
+        title: "Viral 50 - Global",
+      },
+      {
+        img: "./images/viral50.jpg",
+        title: "Viral 50 - Italy",
+      },
+  
+    ];
+
+// append throwbackThursday Cards
+  let papa = document.getElementById("append-cards-here");
+  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"];
+  for (let i = 0; i < cards.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cards[i].img} class="card-img-top"
+    alt="..."/><div class="card-body"><p class="card-text">${cards[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+
+// append Classifichie album covers
 let mamma = document.getElementById("append-mamma-here")
 let listOfMammaClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"]
 for (let i = 0; i < cardsTwo.length; i++) {
   let div = document.createElement("div");
   div.classList.add(...listOfMammaClasses);
-  div.innerHTML = `
-  <div class="card img-fluid">
-  <img
-    src=${cardsTwo[i].img}
-    class="card-img-top"
-    alt="..."
-  />
-  <div class="card-body">
-    <p class="card-text">${cardsTwo[i].title}</p>
-  </div>
-</div>
-  `;
+  div.innerHTML = `<div class="card img-fluid"><img src=${cardsTwo[i].img} class="card-img-top"
+  alt="..."/><div class="card-body"><p class="card-text">${cardsTwo[i].title}</p></div></div>`;
   mamma.appendChild(div);
 }
+// append trending album covers onclick
+document.getElementById("trending-btn").onclick = function () {
+  papa.innerHTML = "";
+  for (let i = 0; i < cardsTrending.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsTrending[i].img}
+    class="card-img-top" alt="..."/><div class="card-body">
+    <p class="card-text">${cardsTrending[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+}
+// append Podcast album covers onclick
+document.getElementById("podcast-btn").onclick = function () {
+  papa.innerHTML = "";
+  for (let i = 0; i < cardsPodcast.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsPodcast[i].img}
+    class="card-img-top" alt="..."/><div class="card-body">
+    <p class="card-text">${cardsPodcast[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+}
+// append Moods & Genres album covers onclick
+document.getElementById("moods-btn").onclick = function () {
+  papa.innerHTML = "";
+  for (let i = 0; i < cardsMoods.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsMoods[i].img}
+    class="card-img-top" alt="..."/><div class="card-body">
+    <p class="card-text">${cardsMoods[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+}
+// append new-releses album covers onclick
+document.getElementById("new-btn").onclick = function () {
+  papa.innerHTML = "";
+  for (let i = 0; i < cardsNew.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsNew[i].img}
+    class="card-img-top" alt="..."/><div class="card-body">
+    <p class="card-text">${cardsNew[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+}
+// append discover album covers onclick
+document.getElementById("discover-btn").onclick = function () {
+  papa.innerHTML = "";
+  for (let i = 0; i < cardsDiscover.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsDiscover[i].img}
+    class="card-img-top" alt="..."/><div class="card-body">
+    <p class="card-text">${cardsDiscover[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+}
+
+
 }
 
 /* below here adding a function for main content links to change display according to the link name*/
