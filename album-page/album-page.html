@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="album-page-styles.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -17,47 +17,144 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="album-page-styles.css" />
+    <link rel="stylesheet" href="../artist-page/artist-page-styles.css" />
     <title>Album page</title>
   </head>
   <body>
     <main>
-      <div class="container-fluid">
-        <div class="row" style="position: relative">
-          <div class="col-2" id="login">
-            <div>
-              <img
-                src="https://s22.q4cdn.com/540910603/files/design/Spotify_Logo_White.png"
-                alt=""
-                width="150px"
-              />
-            </div>
-            <div id="firstOptions">
-              <div class="login-componenet" id="home">
-                <i class="fas fa-home"></i>Home
+      <div>
+        <div class="row ml-0" style="max-width: 100vw">
+          <aside class="col-2 px-0" id="login">
+            <div
+              class="container d-flex flex-column"
+              style="height: 100%; justify-content: space-between"
+            >
+              <!-- sidebar heading, buttons -->
+              <div>
+                <div class="sidebar-heading">
+                  <div
+                    class="navbar-brand d-flex justify-content-center mx-auto"
+                  >
+                    <img
+                      id="spotLogo"
+                      class="my-3"
+                      src="../sbar-ftr-images/Spotify_Logo_CMYK_Black.png"
+                      alt="Spotify Logo White"
+                      style="max-width: 80%; max-height: fit-content"
+                    />
+                  </div>
+                </div>
+                <div class="d-flex flex-column">
+                  <div
+                    class="list-group list-group-flush d-flex mt-2 mb-auto pl-2"
+                  >
+                    <a
+                      class="
+                        list-group-item list-group-item-action
+                        bg-transparent
+                        text-white
+                        align-items-center
+                        d-flex
+                        pl-1
+                        py-2
+                      "
+                      href="#!"
+                    >
+                      <img
+                        src="../sbar-ftr-images/home.png"
+                        alt=""
+                        class="icon"
+                      />
+                      <span class="h6 mb-0">Home</span>
+                    </a>
+                    <a
+                      class="
+                        list-group-item list-group-item-action
+                        bg-transparent
+                        text-white
+                        align-items-center
+                        d-flex
+                        pl-1
+                        py-2
+                      "
+                      href="#!"
+                    >
+                      <img
+                        src="../sbar-ftr-images/search.png"
+                        alt=""
+                        class="icon"
+                      />
+                      <span class="h6 mb-0">Search</span>
+                    </a>
+                    <a
+                      class="
+                        list-group-item list-group-item-action
+                        bg-transparent
+                        text-white
+                        align-items-center
+                        d-flex
+                        pl-1
+                        py-2
+                      "
+                      href="#!"
+                    >
+                      <img
+                        src="../sbar-ftr-images/library-v2.png"
+                        alt=""
+                        class="icon"
+                      />
+                      <span class="h6 mb-0">Your Library</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="login-componenet" id="search">
-                <i class="fas fa-search"></i>Search
+
+              <!-- install app, hr, user -->
+              <div>
+                <div
+                  class="
+                    list-group list-group-flush
+                    d-flex
+                    mb-2
+                    mt-auto
+                    pl-2
+                    align-self-baseline
+                  "
+                >
+                  <a
+                    class="
+                      list-group-item list-group-item-action
+                      bg-transparent
+                      text-white
+                      align-items-center
+                      d-flex
+                      pl-1
+                      py-2
+                    "
+                    href="#!"
+                  >
+                    <i class="fal fa-arrow-circle-down fa-lg px-1"></i>
+                    <span class="h6 mb-0">Install App</span>
+                  </a>
+                </div>
+                <hr />
+                <div class="d-flex" style="align-items: center">
+                  <img
+                    src="https://picsum.photos/50/50?random=1"
+                    alt=""
+                    style="border-radius: 50px"
+                  />
+                  <p class="mb-0 pl-3">User 'The' Awesome</p>
+                </div>
               </div>
-              <div class="login-componenet" id="library">
-                <i class="fas fa-grip-lines-vertical"></i>Your library
-              </div>
             </div>
-            <div class="login-componenet" id="install">
-              <i class="fas fa-arrow-circle-down"></i>Install your app
-              <hr />
-            </div>
-            <div class="login-componenet d-flex" id="user">
-              <img
-                src="https://media-exp1.licdn.com/dms/image/C5603AQEmKU0TgsZoSA/profile-displayphoto-shrink_800_800/0/1517742555887?e=1626307200&v=beta&t=bv_1VSDzF5AP_7_U1e2UmeD30KbK_2lJRu2Laa01Z5w"
-                alt="userImage"
-                width="30px;"
-                height="30px"
-                style="border-radius: 50%"
-              />
-              <div id="user-name">Diego 'Ziba' Banovaz</div>
-            </div>
-          </div>
-          <div class="col-10" id="album-component">
+          </aside>
+          <div
+            class="col-10"
+            id="album-component"
+            style="padding-bottom: 7rem; margin-bottom: 0"
+          >
             <div class="album-container">
               <div class="row">
                 <div class="col-6 mt-4" id="artist-infos">
@@ -133,7 +230,7 @@
             <!-- This row is created to make the text and the images aligned -->
             <div class="col-3 pr-0">
               <img
-                src="./images/horace.jpeg"
+                src="../sbar-ftr-images/horace.jpeg"
                 alt="music name"
                 style="width: 50px; height: 50px"
               />
@@ -149,7 +246,7 @@
           </div>
         </div>
         <div class="col-1"></div>
-        <div class="col-4">
+        <div class="col-4 pt-4">
           <!-- This div is for the media player consisting of the buttons like shuffle 
                       back forward play and loop with the progress-bar -->
           <div class="row mb-1">
