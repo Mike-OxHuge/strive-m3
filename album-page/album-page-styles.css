@@ -13,7 +13,8 @@
   background-color: black;
 }
 #album-component {
-  height: 140vh;
+  /* height: 140vh; */
+  margin-bottom: 7rem;
   background: linear-gradient(
     to bottom right,
     rgb(60, 61, 61) 0%,
@@ -117,7 +118,7 @@ i.fas {
   background-color: #8a8a8a !important;
 }
 .palyer {
-  height: 80px;
+  height: 7rem;
   background-color: rgb(41, 41, 41);
   color: white;
 }
