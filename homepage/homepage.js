@@ -10,25 +10,25 @@ window.onload = function () {
       title: "Lyricists",
     },
     {
-      img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      img: "./images/italia.jpg",
+      title: "Italy's Frequent Rotation",
     },
     {
-      img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      img: "./images/00s.jpg",
+      title: "00s Italy",
     },
     {
-      img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      img: "./images/aperetivo.jpg",
+      title: "Cocktail Hour",
     },
     {
-      img: "./images/karaoke-pic.jpg",
-      title: "Italian Karaoke",
+      img: "./images/90s.jpg",
+      title: "I Love My '90s Hip-Hop",
     },
     // or modify existsing objects to display different things.
   ];
   let papa = document.getElementById("append-cards-here");
-  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex"];
+  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"];
   for (let i = 0; i < cards.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -46,4 +46,55 @@ window.onload = function () {
     `;
     papa.appendChild(div);
   }
-};
+  let cardsTwo = [
+    {
+      img: "./images/top50it.jpg",
+      title: "Top 50 - Italy",
+    },
+    {
+      img: "./images/liricisti.jpg",
+      title: "Top 50 - Global",
+    },
+    {
+      img: "./images/italia.jpg",
+      title: "Viral 50 - Global",
+    },
+    {
+      img: "./images/viral50.jpg",
+      title: "Viral 50 - Italy",
+    },
+
+  ];
+
+
+let mamma = document.getElementById("append-mamma-here")
+let listOfMammaClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "slideInLeft"]
+for (let i = 0; i < cardsTwo.length; i++) {
+  let div = document.createElement("div");
+  div.classList.add(...listOfMammaClasses);
+  div.innerHTML = `
+  <div class="card img-fluid">
+  <img
+    src=${cardsTwo[i].img}
+    class="card-img-top"
+    alt="..."
+  />
+  <div class="card-body">
+    <p class="card-text">${cardsTwo[i].title}</p>
+  </div>
+</div>
+  `;
+  mamma.appendChild(div);
+}
+}
+
+/* below here adding a function for main content links to change display according to the link name*/
+
+// let podcast = document.getElementById("podcast")
+
+// podcast.onclick = function(event){
+//   let allRefs = document.getElementsByClassName("main-content-trending, main-content-moods, main-content-new-releases, main-content-discover ")
+//   for(let classes of allRefs)(
+//     classes += allRefs.classList.add("cards-changer")
+//   )
+// }

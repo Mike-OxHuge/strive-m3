@@ -48,3 +48,17 @@
 .related-artists {
   font-size: 2rem;
 }
+
+.h6 {
+  font-size: 14px !important;
+}
+img.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+#spotLogo {
+  height: 60px;
+  width: auto;
+}

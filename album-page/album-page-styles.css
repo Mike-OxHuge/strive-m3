@@ -1,3 +1,4 @@
+@import url(../global-styles.css);
 * {
   margin: 0;
   padding: 0;
@@ -10,10 +11,17 @@
   height: 100vh;
   color: white;
   background-color: black;
+  padding-bottom: 7rem;
 }
 #album-component {
-  height: 140vh;
-  background-color: rgb(31, 30, 30);
+  /* height: 140vh; */
+  margin-bottom: 7rem;
+  background: linear-gradient(
+    to bottom right,
+    rgb(60, 61, 61) 0%,
+    rgb(22, 22, 22) 15%,
+    rgba(4, 7, 11, 1) 100%
+  );
 }
 .login-componenet {
   margin-top: 10px;
@@ -48,16 +56,15 @@ hr {
   color: white;
   margin-left: 5px;
 }
-#artist-infos {
+/* #artist-infos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 #artist-infos img {
   height: 300px;
   background-size: cover;
-}
+} */
 .album-container {
   width: 100%;
   margin: 20px auto;
@@ -71,16 +78,11 @@ small {
   display: flex;
   align-items: center;
 }
-#more {
-  margin-left: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
 .fa-heart {
   margin-right: 10px;
   cursor: pointer;
 }
-#play-button {
+/* #play-button {
   padding: 5px 30px 5px 30px;
   border-radius: 67px;
   outline: none;
@@ -91,7 +93,7 @@ small {
 #play-button:hover {
   background-color: rgb(132, 236, 132);
   color: black;
-}
+} */
 #songs {
   margin-top: 30px;
   height: 25px;
@@ -109,20 +111,20 @@ i.fas {
 .fas {
   cursor: pointer;
 }
-.play-button-media {
+/* .play-button-media {
   font-size: 30px;
   padding-top: 10px;
-}
+} */
 .progress-bar {
   background-color: #8a8a8a !important;
 }
-.palyer {
-  height: 80px;
+.player {
+  height: 7rem;
   background-color: rgb(41, 41, 41);
   color: white;
 }
 
-input[type='range'] {
+input[type="range"] {
   -webkit-appearance: none; /* Hides the slider so that custom slider can be made */ /* Specific width is required for Firefox. */
   background: gray; /* Otherwise white in Chrome */
   border-radius: 10px;
@@ -130,7 +132,7 @@ input[type='range'] {
   margin-top: 10px;
   outline: none;
 }
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #8a8a8a;
   height: 12px;
@@ -141,6 +143,9 @@ input[type='range']::-webkit-slider-thumb {
   margin-top: 0px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 }
 
-input[type='range']:hover {
+input[type="range"]:hover {
   background: #39913c;
+}
+#myRange {
+  max-width: 50%;
 }
