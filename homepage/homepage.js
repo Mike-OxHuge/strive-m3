@@ -76,15 +76,15 @@ let cardsTrending = [
     },
     {
       img: "./images/vibrators.jpg",
-      title: "Top 50 - Global",
+      title: "Values and Vibrators",
     },
     {
       img: "./images/onion.jpg",
-      title: "Viral 50 - Global",
+      title: "The Friendship Onion",
     },
     {
       img: "./images/hard.jpg",
-      title: "Viral 50 - Italy",
+      title: "We Can DO Hard Things",
     },
 
   ];
@@ -93,19 +93,19 @@ let cardsTrending = [
   let cardsMoods = [
     {
       img: "./images/tens.jpg",
-      title: "Top 50 - Italy",
+      title: "Easy 10s",
     },
     {
       img: "./images/easy00.jpg",
-      title: "Top 50 - Global",
+      title: "Easy 00s",
     },
     {
       img: "./images/perfect.jpg",
-      title: "Viral 50 - Global",
+      title: "A Perfect Day",
     },
     {
       img: "./images/pop.jpg",
-      title: "Viral 50 - Italy",
+      title: "Happy Pop Hits",
     },
 
   ];
@@ -114,20 +114,20 @@ let cardsTrending = [
 
   let cardsNew = [
     {
-      img: "./images/top50it.jpg",
-      title: "Top 50 - Italy",
+      img: "./images/build.jpg",
+      title: "Build a Problem",
     },
     {
-      img: "./images/liricisti.jpg",
-      title: "Top 50 - Global",
+      img: "./images/higher.jpg",
+      title: "Higher Power",
     },
     {
-      img: "./images/italia.jpg",
-      title: "Viral 50 - Global",
+      img: "./images/forever.jpg",
+      title: "Forever",
     },
     {
-      img: "./images/viral50.jpg",
-      title: "Viral 50 - Italy",
+      img: "./images/misadventure.jpg",
+      title: "Life by Misadventure",
     },
 
   ];
@@ -135,20 +135,20 @@ let cardsTrending = [
 
     let cardsDiscover = [
       {
-        img: "./images/top50it.jpg",
-        title: "Top 50 - Italy",
+        img: "./images/lost.jpg",
+        title: "Lost in the Woods",
       },
       {
-        img: "./images/liricisti.jpg",
-        title: "Top 50 - Global",
+        img: "./images/four.jpg",
+        title: "4AM - Chill Out",
       },
       {
-        img: "./images/italia.jpg",
-        title: "Viral 50 - Global",
+        img: "./images/wind.jpg",
+        title: "The Wind Down",
       },
       {
-        img: "./images/viral50.jpg",
-        title: "Viral 50 - Italy",
+        img: "./images/sleep.jpg",
+        title: "Sleep",
       },
   
     ];
@@ -177,6 +177,7 @@ for (let i = 0; i < cardsTwo.length; i++) {
 // append trending album covers onclick
 document.getElementById("trending-btn").onclick = function () {
   papa.innerHTML = "";
+  document.querySelector(".main-content-header h1").innerHTML = ("Trending")
   for (let i = 0; i < cardsTrending.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -189,6 +190,7 @@ document.getElementById("trending-btn").onclick = function () {
 // append Podcast album covers onclick
 document.getElementById("podcast-btn").onclick = function () {
   papa.innerHTML = "";
+  document.querySelector(".main-content-header h1").innerHTML = ("Podcast")
   for (let i = 0; i < cardsPodcast.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -201,6 +203,7 @@ document.getElementById("podcast-btn").onclick = function () {
 // append Moods & Genres album covers onclick
 document.getElementById("moods-btn").onclick = function () {
   papa.innerHTML = "";
+  document.querySelector(".main-content-header h1").innerHTML = ("Moods & Genres")
   for (let i = 0; i < cardsMoods.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -213,6 +216,7 @@ document.getElementById("moods-btn").onclick = function () {
 // append new-releses album covers onclick
 document.getElementById("new-btn").onclick = function () {
   papa.innerHTML = "";
+  document.querySelector(".main-content-header h1").innerHTML = ("New Releases")
   for (let i = 0; i < cardsNew.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -225,6 +229,7 @@ document.getElementById("new-btn").onclick = function () {
 // append discover album covers onclick
 document.getElementById("discover-btn").onclick = function () {
   papa.innerHTML = "";
+  document.querySelector(".main-content-header h1").innerHTML = ("Discover")
   for (let i = 0; i < cardsDiscover.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -233,6 +238,7 @@ document.getElementById("discover-btn").onclick = function () {
     <p class="card-text">${cardsDiscover[i].title}</p></div></div>`;
     papa.appendChild(div);
   }
+
 }
 
 
