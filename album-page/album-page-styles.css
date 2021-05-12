@@ -11,6 +11,7 @@
   height: 100vh;
   color: white;
   background-color: black;
+  padding-bottom: 7rem;
 }
 #album-component {
   /* height: 140vh; */
