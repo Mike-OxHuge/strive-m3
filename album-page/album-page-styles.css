@@ -1,3 +1,4 @@
+@import url(../global-styles.css);
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +14,12 @@
 }
 #album-component {
   height: 140vh;
-  background-color: rgb(31, 30, 30);
+  background: linear-gradient(
+    to bottom right,
+    rgb(60, 61, 61) 0%,
+    rgb(22, 22, 22) 15%,
+    rgba(4, 7, 11, 1) 100%
+  );
 }
 .login-componenet {
   margin-top: 10px;
@@ -48,16 +54,15 @@ hr {
   color: white;
   margin-left: 5px;
 }
-#artist-infos {
+/* #artist-infos {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 }
 #artist-infos img {
   height: 300px;
   background-size: cover;
-}
+} */
 .album-container {
   width: 100%;
   margin: 20px auto;
@@ -71,16 +76,11 @@ small {
   display: flex;
   align-items: center;
 }
-#more {
-  margin-left: 10px;
-  font-size: 20px;
-  cursor: pointer;
-}
 .fa-heart {
   margin-right: 10px;
   cursor: pointer;
 }
-#play-button {
+/* #play-button {
   padding: 5px 30px 5px 30px;
   border-radius: 67px;
   outline: none;
@@ -91,7 +91,7 @@ small {
 #play-button:hover {
   background-color: rgb(132, 236, 132);
   color: black;
-}
+} */
 #songs {
   margin-top: 30px;
   height: 25px;
@@ -109,10 +109,10 @@ i.fas {
 .fas {
   cursor: pointer;
 }
-.play-button-media {
+/* .play-button-media {
   font-size: 30px;
   padding-top: 10px;
-}
+} */
 .progress-bar {
   background-color: #8a8a8a !important;
 }

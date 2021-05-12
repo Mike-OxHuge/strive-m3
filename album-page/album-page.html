@@ -17,7 +17,7 @@
       integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
     />
-    <title>Document</title>
+    <title>Album page</title>
   </head>
   <body>
     <main>
@@ -60,21 +60,61 @@
           <div class="col-10" id="album-component">
             <div class="album-container">
               <div class="row">
-                <div class="col-6" id="artist-infos">
-                  <img
-                    src="https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.f3noMS6U/SharedImage-53612.jpg?t=1a8ff15292f3d96da274"
-                    alt="queenImg"
-                  />
-                  <h3>Queen II (Deluxe Edition 2011 Remaster)</h3>
-                  <small>queen</small>
-                  <button id="play-button">PLAY</button>
-                  <small>1974 . 16 SONGS</small>
-                  <div id="Options">
-                    <i class="far fa-heart"></i>
-                    <span id="more">...</span>
+                <div class="col-6 mt-4" id="artist-infos">
+                  <div class="container">
+                    <div class="d-flex justify-content-center">
+                      <img
+                        src="https://dvfnvgxhycwzf.cloudfront.net/media/SharedImage/imageFull/.f3noMS6U/SharedImage-53612.jpg?t=1a8ff15292f3d96da274"
+                        alt="queenImg"
+                        class="img-fluid w-50"
+                      />
+                    </div>
+                    <div class="d-flex justify-content-center mt-2">
+                      <h3 class="text-center" style="max-width: 50%">
+                        Queen II (Deluxe Edition 2011 Remaster)
+                      </h3>
+                    </div>
+                    <div class="d-flex flex-column align-items-center mt-n2">
+                      <span class="text-muted text-center">Queen</span>
+
+                      <div class="my-5">
+                        <div>
+                          <button
+                            type="button"
+                            class="mx-2 btn btn-success"
+                            style="border-radius: 20px"
+                          >
+                            <span
+                              class="px-5 my-2 text-center"
+                              style="font-weight: 300"
+                              >PLAY</span
+                            >
+                          </button>
+                        </div>
+                        <div class="text-muted mt-1 text-center">
+                          <span
+                            >1974
+                            <i
+                              class="fas fa-circle"
+                              style="
+                                font-size: 0.2rem;
+                                padding: 0.4rem;
+                                position: relative;
+                                bottom: 0.15rem;
+                              "
+                            ></i>
+                            16 SONGS</span
+                          >
+                        </div>
+                      </div>
+                      <div id="Options">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-ellipsis-h text-white"></i>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class="col-6" id="songs-container">
+                <div class="col-6 mt-4" id="songs-container">
                   <!-- songs going here -->
                 </div>
               </div>
@@ -153,25 +193,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <script>
-      (() => {
-        for (let index = 0; index < 15; index++) {
-          document.getElementById(
-            "songs-container"
-          ).innerHTML += `<div id="songs">
-                    <div class="d-flex">
-                      <div><i class="fas fa-music"></i></div>
-                      <div>
-                        <div>Procession-Remastered 2011</div>
-                        <div><small>queen</small></div>
-                      </div>
-                    </div>
-                    <div>4:13</div>
-                  </div>`;
-        }
-      })();
-    </script> -->
     <script src="./album-page.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
