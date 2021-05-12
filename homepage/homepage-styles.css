@@ -1,7 +1,4 @@
 @import url(../global-styles.css);
-/* importing fonts */
-@import url(//db.onlinewebfonts.com/c/01173b246d9d9ea808ea75a26b3b61bb?family=Circular+Spotify+Tx+T+Black);
-
 /* giving this font to all the text elements */
 h1,
 h2,
@@ -19,15 +16,10 @@ span {
     padding: 0;
     box-sizing: border-box;
 }
-#sidebar{
-    background: black;
-    height: 100vh;
-    color:gray;
-}
+
 #main-content{
     background: rgb(37,70,110);
     background: linear-gradient(to bottom right, rgba(37,70,110,1) 0%, rgba(4,7,11,1) 100%);
-    height: 100vh;
     }
 #main-content-nav{
     padding: 25px;
@@ -48,11 +40,6 @@ span {
     color: white;
 
 }
-/* .main-content-header{
-    color: white;
-    font-weight: bolder;
-   
-} */
 
 .main-content-header h1{
     font-size: 1.7rem;
@@ -119,8 +106,6 @@ span {
 .sidebar-buttons{
     display: flex;
     align-items: flex-end;
-    
-
 }
 
 #footer{
@@ -131,8 +116,4 @@ span {
     color: white;
     margin-bottom: 10px;
 }
-
-/* .cards-changer{
-    display: none;
-} */
 
