@@ -11,104 +11,102 @@ span {
   font-family: "Circular Spotify Tx T Black" !important;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#main-content{
-    background: rgb(37,70,110);
-    background: linear-gradient(to bottom right, rgba(37,70,110,1) 0%, rgba(4,7,11,1) 100%);
-    }
-#main-content-nav{
-    padding: 25px;
-    font-size: 0.7rem;
+#main-content {
+  background: rgb(37, 70, 110);
+  background: linear-gradient(
+    to bottom right,
+    rgba(37, 70, 110, 1) 0%,
+    rgba(4, 7, 11, 1) 100%
+  );
+}
+#main-content-nav {
+  padding: 25px;
+  font-size: 0.7rem;
 }
 
-#main-content-nav .nav .nav-item .nav-link{
-    color: #919dac;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: bolder;
-    cursor: pointer;
-    letter-spacing: 1px;
-    font-size: 0.6rem;
+#main-content-nav .nav .nav-item .nav-link {
+  color: #919dac;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bolder;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-size: 0.6rem;
 }
 
-#main-content-nav .nav .nav-item .nav-link:hover{
-    color: white;
-
+#main-content-nav .nav .nav-item .nav-link:hover {
+  color: white;
 }
 
-.main-content-header h1{
-    font-size: 1.7rem;
-    margin-left: 75px;
-    margin-bottom: 20px;
-    color: white;
-    font-weight: bolder; 
+.main-content-header h1 {
+  font-size: 1.7rem;
+  margin-left: 75px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: bolder;
 }
-#append-cards-here{
-    margin-left: 60px;
-
-}
+/* #append-cards-here {
+  margin-left: 60px;
+} */
 .underline {
-
-    position:relative;
-  
-  }
-  
-  .underline:hover::after{
-    content: "";
-    position: absolute;
-    height: 0.2em;
-    background: #0caf0c;
-    top: 80%;
-    width: 30%;
-    left: 50%;
-    transform: translateX(-50%);
-  } 
-
-
-.card{
-    border: transparent;
-    background: transparent;
-    text-align: center;
-    color: #dbdcde;
-    font-weight: 600;
-    font-size: 0.7rem;
-
- }
-.card-body{
-    padding: 8px;
+  position: relative;
 }
 
-#sign-up-btn{
-    border-radius: 20px;
-    margin-bottom: 15px;
-    cursor: pointer;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: black;
-    font-weight: bolder;
-    background-color: white;
-    border: none;
-}
-#login-btn{
-    border-radius: 20px;
-    border: 2px solid #a1a1a0;
-    letter-spacing: 1px;
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #dbdcde;
-    font-weight: bolder;
-    background-color: #161719;
+.underline:hover::after {
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  background: #0caf0c;
+  top: 80%;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.sidebar-component{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    cursor: pointer;
+.card {
+  border: transparent;
+  background: transparent;
+  text-align: center;
+  color: #dbdcde;
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.card-body {
+  padding: 8px;
+}
+
+#sign-up-btn {
+  border-radius: 20px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  font-weight: bolder;
+  background-color: white;
+  border: none;
+}
+#login-btn {
+  border-radius: 20px;
+  border: 2px solid #a1a1a0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #dbdcde;
+  font-weight: bolder;
+  background-color: #161719;
+}
+
+.sidebar-component {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 #home:hover,
 #search:hover,
@@ -116,30 +114,23 @@ span {
   color: white;
 }
 
-.sidebar-buttons{
-    display: flex;
-    align-items: flex-end;
+.sidebar-buttons {
+  display: flex;
+  align-items: flex-end;
 }
 
-#footer{
-    background:#2c2c2c;
-    }
-
-.player-icons{
-    color: white;
-    margin-bottom: 10px;
-}
-.main-content-second-header h1{
-    font-size: 1.4rem;
-    margin-left: 75px;
-    margin-bottom: 15px;
-    margin-top: 50px;
-    color: white;
-
-
+#footer {
+  background: #2c2c2c;
 }
 
-
-
-
-
+.player-icons {
+  color: white;
+  margin-bottom: 10px;
+}
+.main-content-second-header h1 {
+  font-size: 1.4rem;
+  margin-left: 75px;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  color: white;
+}

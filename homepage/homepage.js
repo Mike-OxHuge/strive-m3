@@ -27,7 +27,7 @@ window.onload = function () {
     },
   ];
 
-  // second cards 
+  // second cards
 
   let cardsTwo = [
     {
@@ -46,29 +46,27 @@ window.onload = function () {
       img: "./images/viral50.jpg",
       title: "Viral 50 - Italy",
     },
-
   ];
-// cards Trending
-let cardsTrending = [
-  {
-    img: "./images/love.jpg",
-    title: "Top 50 - Italy",
-  },
-  {
-    img: "./images/dolla.jpg",
-    title: "Top 50 - Global",
-  },
-  {
-    img: "./images/nobody.jpg",
-    title: "Viral 50 - Global",
-  },
-  {
-    img: "./images/bad.jpg",
-    title: "Viral 50 - Italy",
-  },
-
-];
-// cards Podcast
+  // cards Trending
+  let cardsTrending = [
+    {
+      img: "./images/love.jpg",
+      title: "Top 50 - Italy",
+    },
+    {
+      img: "./images/dolla.jpg",
+      title: "Top 50 - Global",
+    },
+    {
+      img: "./images/nobody.jpg",
+      title: "Viral 50 - Global",
+    },
+    {
+      img: "./images/bad.jpg",
+      title: "Viral 50 - Italy",
+    },
+  ];
+  // cards Podcast
   let cardsPodcast = [
     {
       img: "./images/joe.jpg",
@@ -86,9 +84,8 @@ let cardsTrending = [
       img: "./images/hard.jpg",
       title: "We Can DO Hard Things",
     },
-
   ];
-// cards Moods & genres
+  // cards Moods & genres
 
   let cardsMoods = [
     {
@@ -107,7 +104,6 @@ let cardsTrending = [
       img: "./images/pop.jpg",
       title: "Happy Pop Hits",
     },
-
   ];
 
   // cards New releases
@@ -129,33 +125,38 @@ let cardsTrending = [
       img: "./images/misadventure.jpg",
       title: "Life by Misadventure",
     },
-
   ];
-    // cards discover
+  // cards discover
 
-    let cardsDiscover = [
-      {
-        img: "./images/lost.jpg",
-        title: "Lost in the Woods",
-      },
-      {
-        img: "./images/four.jpg",
-        title: "4AM - Chill Out",
-      },
-      {
-        img: "./images/wind.jpg",
-        title: "The Wind Down",
-      },
-      {
-        img: "./images/sleep.jpg",
-        title: "Sleep",
-      },
-  
-    ];
+  let cardsDiscover = [
+    {
+      img: "./images/lost.jpg",
+      title: "Lost in the Woods",
+    },
+    {
+      img: "./images/four.jpg",
+      title: "4AM - Chill Out",
+    },
+    {
+      img: "./images/wind.jpg",
+      title: "The Wind Down",
+    },
+    {
+      img: "./images/sleep.jpg",
+      title: "Sleep",
+    },
+  ];
 
-// append throwbackThursday Cards
+  // append throwbackThursday Cards
   let papa = document.getElementById("append-cards-here");
-  let listOfClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "px-1"];
+  let listOfClasses = [
+    "col-12",
+    "col-sm-6",
+    "col-md-4",
+    "col-lg-2",
+    "d-flex",
+    "px-1",
+  ];
   for (let i = 0; i < cards.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
@@ -164,85 +165,120 @@ let cardsTrending = [
     papa.appendChild(div);
   }
 
-// append Classifichie album covers
-let mamma = document.getElementById("append-mamma-here")
-let listOfMammaClasses = ["col-12", "col-sm-6", "col-md-4", "col-lg-2", "d-flex", "px-1"]
-for (let i = 0; i < cardsTwo.length; i++) {
-  let div = document.createElement("div");
-  div.classList.add(...listOfMammaClasses);
-  div.innerHTML = `<div class="card img-fluid"><img src=${cardsTwo[i].img} class="card-img-top"
-  alt="..."/><div class="card-body"><p class="card-text">${cardsTwo[i].title}</p></div></div>`;
-  mamma.appendChild(div);
-}
-// append trending album covers onclick
-document.getElementById("trending-btn").onclick = function () {
-  papa.innerHTML = "";
-  document.querySelector(".main-content-header h1").innerHTML = ("Trending")
-  for (let i = 0; i < cardsTrending.length; i++) {
+  // append Classifichie album covers
+  let mamma = document.getElementById("append-mamma-here");
+  let listOfMammaClasses = [
+    "col-12",
+    "col-sm-6",
+    "col-md-4",
+    "col-lg-2",
+    "d-flex",
+    "px-1",
+  ];
+  for (let i = 0; i < cardsTwo.length; i++) {
     let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cardsTrending[i].img}
+    div.classList.add(...listOfMammaClasses);
+    div.innerHTML = `<div class="card img-fluid"><img src=${cardsTwo[i].img} class="card-img-top"
+  alt="..."/><div class="card-body"><p class="card-text">${cardsTwo[i].title}</p></div></div>`;
+    mamma.appendChild(div);
+  }
+  document.getElementById("trending-btn").classList.add("active-border");
+
+  // append trending album covers onclick
+  document.getElementById("trending-btn").onclick = function () {
+    papa.innerHTML = "";
+    document.querySelector(".main-content-header h1").innerHTML = "Trending";
+    for (let i = 0; i < cardsTrending.length; i++) {
+      let div = document.createElement("div");
+      div.classList.add(...listOfClasses);
+      div.innerHTML = `<div class="card img-fluid"><img src=${cardsTrending[i].img}
     class="card-img-top" alt="..."/><div class="card-body">
     <p class="card-text">${cardsTrending[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
-}
-// append Podcast album covers onclick
-document.getElementById("podcast-btn").onclick = function () {
-  papa.innerHTML = "";
-  document.querySelector(".main-content-header h1").innerHTML = ("Podcast")
-  for (let i = 0; i < cardsPodcast.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cardsPodcast[i].img}
+      papa.appendChild(div);
+    }
+    document.getElementById("trending-btn").classList.add("active-border");
+    document.getElementById("podcast-btn").classList.remove("active-border");
+    document.getElementById("moods-btn").classList.remove("active-border");
+    document.getElementById("new-btn").classList.remove("active-border");
+    document.getElementById("discover-btn").classList.remove("active-border");
+  };
+  // append Podcast album covers onclick
+  document.getElementById("podcast-btn").onclick = function () {
+    papa.innerHTML = "";
+    document.querySelector(".main-content-header h1").innerHTML = "Podcast";
+    for (let i = 0; i < cardsPodcast.length; i++) {
+      let div = document.createElement("div");
+      div.classList.add(...listOfClasses);
+      div.innerHTML = `<div class="card img-fluid"><img src=${cardsPodcast[i].img}
     class="card-img-top" alt="..."/><div class="card-body">
     <p class="card-text">${cardsPodcast[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
-}
-// append Moods & Genres album covers onclick
-document.getElementById("moods-btn").onclick = function () {
-  papa.innerHTML = "";
-  document.querySelector(".main-content-header h1").innerHTML = ("Moods & Genres")
-  for (let i = 0; i < cardsMoods.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cardsMoods[i].img}
+      papa.appendChild(div);
+    }
+    document.getElementById("trending-btn").classList.remove("active-border");
+    document.getElementById("podcast-btn").classList.add("active-border");
+    document.getElementById("moods-btn").classList.remove("active-border");
+    document.getElementById("new-btn").classList.remove("active-border");
+    document.getElementById("discover-btn").classList.remove("active-border");
+  };
+
+  // append Moods & Genres album covers onclick
+  document.getElementById("moods-btn").onclick = function () {
+    papa.innerHTML = "";
+    document.querySelector(".main-content-header h1").innerHTML =
+      "Moods & Genres";
+    for (let i = 0; i < cardsMoods.length; i++) {
+      let div = document.createElement("div");
+      div.classList.add(...listOfClasses);
+      div.innerHTML = `<div class="card img-fluid"><img src=${cardsMoods[i].img}
     class="card-img-top" alt="..."/><div class="card-body">
     <p class="card-text">${cardsMoods[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
-}
-// append new-releses album covers onclick
-document.getElementById("new-btn").onclick = function () {
-  papa.innerHTML = "";
-  document.querySelector(".main-content-header h1").innerHTML = ("New Releases")
-  for (let i = 0; i < cardsNew.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cardsNew[i].img}
+      papa.appendChild(div);
+    }
+    document.getElementById("trending-btn").classList.remove("active-border");
+    document.getElementById("podcast-btn").classList.remove("active-border");
+    document.getElementById("moods-btn").classList.add("active-border");
+    document.getElementById("new-btn").classList.remove("active-border");
+    document.getElementById("discover-btn").classList.remove("active-border");
+  };
+
+  // append new-releses album covers onclick
+  document.getElementById("new-btn").onclick = function () {
+    papa.innerHTML = "";
+    document.querySelector(".main-content-header h1").innerHTML =
+      "New Releases";
+    for (let i = 0; i < cardsNew.length; i++) {
+      let div = document.createElement("div");
+      div.classList.add(...listOfClasses);
+      div.innerHTML = `<div class="card img-fluid"><img src=${cardsNew[i].img}
     class="card-img-top" alt="..."/><div class="card-body">
     <p class="card-text">${cardsNew[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
-}
-// append discover album covers onclick
-document.getElementById("discover-btn").onclick = function () {
-  papa.innerHTML = "";
-  document.querySelector(".main-content-header h1").innerHTML = ("Discover")
-  for (let i = 0; i < cardsDiscover.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cardsDiscover[i].img}
+      papa.appendChild(div);
+    }
+    document.getElementById("trending-btn").classList.remove("active-border");
+    document.getElementById("podcast-btn").classList.remove("active-border");
+    document.getElementById("moods-btn").classList.remove("active-border");
+    document.getElementById("new-btn").classList.add("active-border");
+    document.getElementById("discover-btn").classList.remove("active-border");
+  };
+  // append discover album covers onclick
+  document.getElementById("discover-btn").onclick = function () {
+    papa.innerHTML = "";
+    document.querySelector(".main-content-header h1").innerHTML = "Discover";
+    for (let i = 0; i < cardsDiscover.length; i++) {
+      let div = document.createElement("div");
+      div.classList.add(...listOfClasses);
+      div.innerHTML = `<div class="card img-fluid"><img src=${cardsDiscover[i].img}
     class="card-img-top" alt="..."/><div class="card-body">
     <p class="card-text">${cardsDiscover[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
-
-}
-
-
-}
+      papa.appendChild(div);
+    }
+    document.getElementById("trending-btn").classList.remove("active-border");
+    document.getElementById("podcast-btn").classList.remove("active-border");
+    document.getElementById("moods-btn").classList.remove("active-border");
+    document.getElementById("new-btn").classList.remove("active-border");
+    document.getElementById("discover-btn").classList.add("active-border");
+  };
+};
 
 /* below here adding a function for main content links to change display according to the link name*/
 
