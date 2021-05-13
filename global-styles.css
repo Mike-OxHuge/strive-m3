@@ -49,6 +49,9 @@ body {
 div.row {
   max-width: 100% !important;
 }
+img.icon {
+  filter: brightness(50%) !important;
+}
 /* 
 Here's an example animation
 apply the class='slideInLeft' to the element and it will slide :)
