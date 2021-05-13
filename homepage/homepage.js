@@ -278,6 +278,16 @@ window.onload = function () {
     document.getElementById("new-btn").classList.remove("main-active");
     document.getElementById("discover-btn").classList.add("main-active");
   };
+
+  let hover = document.querySelectorAll("img.icon")
+  if (document.querySelectorAll(".list-group-item>span:hover")){
+    for(let i = 0; i < hover.length; i++){
+      hover[i].classList.add("img.icon:hover")
+    }
+  }
+    
+  
+  
 };
 
 /* below here adding a function for main content links to change display according to the link name*/

@@ -16,6 +16,9 @@ span {
   padding: 0;
   box-sizing: border-box;
 }
+aside{
+  position: sticky;
+}
 
 #main-content {
   background: rgb(37, 70, 110);
@@ -24,6 +27,9 @@ span {
     rgba(37, 70, 110, 1) 0%,
     rgba(4, 7, 11, 1) 100%
   );
+}
+img.icon:hover {
+  filter: brightness(100%) !important;
 }
 
 #main-content-nav {
@@ -103,25 +109,31 @@ span {
 #sign-up-btn {
   border-radius: 20px;
   margin-bottom: 15px;
+  margin-left: 9px;
+  margin-right: 9px;
   cursor: pointer;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: black;
-  font-weight: 700;
+  font-weight: 800;
   background-color: #ffffff;
   border: none;
   padding: 7px;
+  font-size: 10px;
 }
 #login-btn {
   border-radius: 20px;
+  margin-left: 9px;
+  margin-right: 9px;
   border: 2px solid #a1a1a0;
   letter-spacing: 1px;
   cursor: pointer;
   text-transform: uppercase;
   color: #dbdcde;
-  font-weight: 700;
+  font-weight: 800;
   background-color: #161719;
   padding: 7px;
+  font-size: 10px;
 }
 
 .sidebar-component {
