@@ -82,6 +82,6 @@ apply the class='slideInLeft' to the element and it will slide :)
 
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: 1.5s;
+  animation-duration: 1.6s;
   animation-fill-mode: both;
 }

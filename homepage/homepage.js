@@ -156,12 +156,13 @@ window.onload = function () {
     "col-lg-2",
     "d-flex",
     "px-1",
+    "fadeIn"
   ];
   for (let i = 0; i < cards.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"><img src=${cards[i].img} class="card-img-top"
-    alt="..."/><div class="card-body"><p class="card-text">${cards[i].title}</p></div></div>`;
+    div.innerHTML = `<div class="card img-fluid"> <a href="/album-page/album-page.html"><img src=${cards[i].img} class="card-img-top"
+    alt="..."/></a><div class="card-body"><p class="card-text">${cards[i].title}</p></div></div>`;
     papa.appendChild(div);
   }
 
@@ -279,12 +280,12 @@ window.onload = function () {
     document.getElementById("discover-btn").classList.add("main-active");
   };
 
-  let hover = document.querySelectorAll("img.icon")
-  if (document.querySelectorAll(".list-group-item>span:hover")){
-    for(let i = 0; i < hover.length; i++){
-      hover[i].classList.add("img.icon:hover")
-    }
-  }
+  // let hover = document.querySelectorAll("img.icon")
+  // if (document.querySelectorAll(".list-group-item>span:hover")){
+  //   for(let i = 0; i < hover.length; i++){
+  //     hover[i].classList.add("img.icon:hover")
+  //   }
+  // }
     
   
   
