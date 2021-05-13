@@ -59,6 +59,12 @@ img.icon {
   width: auto !important;
   height: auto !important;
 }
+.song-name {
+  font-size: 1rem !important;
+}
+.artist-name {
+  font-size: 1rem !important;
+}
 /* 
 Here's an example animation
 apply the class='slideInLeft' to the element and it will slide :)
