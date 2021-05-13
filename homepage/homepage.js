@@ -182,7 +182,7 @@ window.onload = function () {
   alt="..."/><div class="card-body"><p class="card-text">${cardsTwo[i].title}</p></div></div>`;
     mamma.appendChild(div);
   }
-  document.getElementById("trending-btn").classList.add("active-border");
+  document.getElementById("trending-btn").classList.add("main-active");
 
   // append trending album covers onclick
   document.getElementById("trending-btn").onclick = function () {
@@ -196,11 +196,11 @@ window.onload = function () {
     <p class="card-text">${cardsTrending[i].title}</p></div></div>`;
       papa.appendChild(div);
     }
-    document.getElementById("trending-btn").classList.add("active-border");
-    document.getElementById("podcast-btn").classList.remove("active-border");
-    document.getElementById("moods-btn").classList.remove("active-border");
-    document.getElementById("new-btn").classList.remove("active-border");
-    document.getElementById("discover-btn").classList.remove("active-border");
+    document.getElementById("trending-btn").classList.add("main-active");
+    document.getElementById("podcast-btn").classList.remove("main-active");
+    document.getElementById("moods-btn").classList.remove("main-active");
+    document.getElementById("new-btn").classList.remove("main-active");
+    document.getElementById("discover-btn").classList.remove("main-active");
   };
   // append Podcast album covers onclick
   document.getElementById("podcast-btn").onclick = function () {
@@ -214,11 +214,11 @@ window.onload = function () {
     <p class="card-text">${cardsPodcast[i].title}</p></div></div>`;
       papa.appendChild(div);
     }
-    document.getElementById("trending-btn").classList.remove("active-border");
-    document.getElementById("podcast-btn").classList.add("active-border");
-    document.getElementById("moods-btn").classList.remove("active-border");
-    document.getElementById("new-btn").classList.remove("active-border");
-    document.getElementById("discover-btn").classList.remove("active-border");
+    document.getElementById("trending-btn").classList.remove("main-active");
+    document.getElementById("podcast-btn").classList.add("main-active");
+    document.getElementById("moods-btn").classList.remove("main-active");
+    document.getElementById("new-btn").classList.remove("main-active");
+    document.getElementById("discover-btn").classList.remove("main-active");
   };
 
   // append Moods & Genres album covers onclick
@@ -234,11 +234,11 @@ window.onload = function () {
     <p class="card-text">${cardsMoods[i].title}</p></div></div>`;
       papa.appendChild(div);
     }
-    document.getElementById("trending-btn").classList.remove("active-border");
-    document.getElementById("podcast-btn").classList.remove("active-border");
-    document.getElementById("moods-btn").classList.add("active-border");
-    document.getElementById("new-btn").classList.remove("active-border");
-    document.getElementById("discover-btn").classList.remove("active-border");
+    document.getElementById("trending-btn").classList.remove("main-active");
+    document.getElementById("podcast-btn").classList.remove("main-active");
+    document.getElementById("moods-btn").classList.add("main-active");
+    document.getElementById("new-btn").classList.remove("main-active");
+    document.getElementById("discover-btn").classList.remove("main-active");
   };
 
   // append new-releses album covers onclick
@@ -254,11 +254,11 @@ window.onload = function () {
     <p class="card-text">${cardsNew[i].title}</p></div></div>`;
       papa.appendChild(div);
     }
-    document.getElementById("trending-btn").classList.remove("active-border");
-    document.getElementById("podcast-btn").classList.remove("active-border");
-    document.getElementById("moods-btn").classList.remove("active-border");
-    document.getElementById("new-btn").classList.add("active-border");
-    document.getElementById("discover-btn").classList.remove("active-border");
+    document.getElementById("trending-btn").classList.remove("main-active");
+    document.getElementById("podcast-btn").classList.remove("main-active");
+    document.getElementById("moods-btn").classList.remove("main-active");
+    document.getElementById("new-btn").classList.add("main-active");
+    document.getElementById("discover-btn").classList.remove("main-active");
   };
   // append discover album covers onclick
   document.getElementById("discover-btn").onclick = function () {
@@ -272,11 +272,11 @@ window.onload = function () {
     <p class="card-text">${cardsDiscover[i].title}</p></div></div>`;
       papa.appendChild(div);
     }
-    document.getElementById("trending-btn").classList.remove("active-border");
-    document.getElementById("podcast-btn").classList.remove("active-border");
-    document.getElementById("moods-btn").classList.remove("active-border");
-    document.getElementById("new-btn").classList.remove("active-border");
-    document.getElementById("discover-btn").classList.add("active-border");
+    document.getElementById("trending-btn").classList.remove("main-active");
+    document.getElementById("podcast-btn").classList.remove("main-active");
+    document.getElementById("moods-btn").classList.remove("main-active");
+    document.getElementById("new-btn").classList.remove("main-active");
+    document.getElementById("discover-btn").classList.add("main-active");
   };
 };
 

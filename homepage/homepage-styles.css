@@ -25,9 +25,11 @@ span {
     rgba(4, 7, 11, 1) 100%
   );
 }
+
 #main-content-nav {
   padding: 25px;
   font-size: 0.7rem;
+  margin-bottom: 30px;
 }
 
 #main-content-nav .nav .nav-item .nav-link {
@@ -43,6 +45,9 @@ span {
 #main-content-nav .nav .nav-item .nav-link:hover {
   color: white;
 }
+#main-content-nav .nav .nav-item .nav-link.main-active {
+  color: white;
+}
 
 .main-content-header h1 {
   font-size: 1.7rem;
@@ -51,9 +56,12 @@ span {
   color: white;
   font-weight: bolder;
 }
-/* #append-cards-here {
-  margin-left: 60px;
-} */
+#append-cards-here {
+  margin-left: 73px;
+}
+#append-mamma-here{
+  margin-left: 73px;
+}
 .underline {
   position: relative;
 }
@@ -67,6 +75,17 @@ span {
   width: 30%;
   left: 50%;
   transform: translateX(-50%);
+}
+.underline.main-active::after{
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  background: #0caf0c;
+  top: 80%;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
 .card {
@@ -88,9 +107,10 @@ span {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: black;
-  font-weight: bolder;
-  background-color: white;
+  font-weight: 700;
+  background-color: #ffffff;
   border: none;
+  padding: 7px;
 }
 #login-btn {
   border-radius: 20px;
@@ -99,8 +119,9 @@ span {
   cursor: pointer;
   text-transform: uppercase;
   color: #dbdcde;
-  font-weight: bolder;
+  font-weight: 700;
   background-color: #161719;
+  padding: 7px;
 }
 
 .sidebar-component {
