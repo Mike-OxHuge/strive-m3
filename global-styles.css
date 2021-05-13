@@ -52,6 +52,13 @@ div.row {
 img.icon {
   filter: brightness(50%) !important;
 }
+#spotLogo {
+  display: block;
+  max-width: 80% !important;
+  max-height: 50% !important;
+  width: auto !important;
+  height: auto !important;
+}
 /* 
 Here's an example animation
 apply the class='slideInLeft' to the element and it will slide :)
