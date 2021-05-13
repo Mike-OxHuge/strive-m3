@@ -17,107 +17,282 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="../artist-page/artist-page-styles.css" />
+    <link rel="stylesheet" href="../album-page/album-page-styles.css" />
     <link rel="stylesheet" href="homepage-styles.css" />
   </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div id="sidebar" class="col-2">
+  <body style="background: #181818; min-width: 100vw">
+    <div class="row ml-0" style="max-width: 100vw">
+      <aside class="col-2 px-0" id="login">
+        <div
+          class="container d-flex flex-column"
+          style="height: 100%; justify-content: space-between"
+        >
+          <!-- sidebar heading, buttons -->
           <div>
-            <img
-              src="https://s22.q4cdn.com/540910603/files/design/Spotify_Logo_White.png"
-              alt=""
-              width="150px"
-            />
-          </div>
-
-          <!-- next time use semantic tags. <aside> fits perfectly.
-            you still can assign any classes to it, because it's the same
-          as any other <div>, it just makes code slightly better. 
-            however this element will be replaced by the one that aymane is doing, will do this in the afternoon -->
-          <div id="sidebar-options">
-            <div class="sidebar-component" id="home">
-              <i class="fas fa-home"></i>Home
-            </div>
-            <div class="sidebar-component" id="search">
-              <i class="fas fa-search"></i>Search
-            </div>
-            <div class="sidebar-component" id="library">
-              <i class="fas fa-grip-lines-vertical"></i>Your library
-            </div>
-          </div>
-          <div class="sidebar-buttons d-flex">
-            <button id="sign-up-btn" type="button" class="btn btn-light btn-block">
-              SIGN UP
-            </button>
-            <button id="login-btn" type="button" class="btn btn-dark btn-block">
-              LOGIN
-            </button>
-          </div>
-          <div class="sidebar-footer"></div>
-        </div>
-        <div id="main-content" class="col-10">
-          <div id="main-content-nav" class="container">
-            <div class="col d-flex" style="justify-content: center">
-              <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link underline main-content-trending" id="trending-btn" href="#">Trending</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline main-content-podcast" href="#">Podcast</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline main-content-moods" href="#">Moods and Genres</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline main-content-new-releases" href="#">New Releases</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline main-content-discover" href="#">Discover</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="container main-content-header">
-            <h1>#THROWBACKTHURSDAY</h1>
-          </div>
-          <div class="container">
-            <div class="row" id="append-cards-here">
-              <!-- all the  first cards are going here -->
-            </div>
-          </div>
-          <div class="container main-content-header" >
-            <h1>Classificie</h1>
-          </div>
-          <div class="container" style="margin-left: 75px;">
-            <div class="row" id="append-mamma-here">
-              <!-- all the second cards are going here -->
-            </div>
-          </div>
-        </div>
-
-        <!-- footer will be replaced by the one what aymane doing -->
-        <div id="footer" class="container-fluid">
-          <div class="container">
-            <div class="row">
-              <div class="col-10">
-                <div class="col text-center align-self-center player-icons">
-                  <i class="fas fa-random"></i>
-                  <i class="fas fa-step-backward"></i>
-                  <i class="fas fa-play-circle play-button-media"></i>
-                  <i class="fas fa-step-forward"></i>
-                  <i class="fas fa-redo"></i>
-                </div>
+            <div class="sidebar-heading">
+              <div class="navbar-brand d-flex justify-content-center mx-auto">
+                <img
+                  id="spotLogo"
+                  class="my-3"
+                  src="../sbar-ftr-images/Spotify_Logo_CMYK_Black.png"
+                  alt="Spotify Logo White"
+                  style="max-width: 80%; max-height: fit-content"
+                />
               </div>
             </div>
-            <div class="col-2"></div>
+            <div class="d-flex flex-column">
+              <div class="list-group list-group-flush d-flex mt-2 mb-auto pl-2">
+                <a
+                  class="
+                    list-group-item list-group-item-action
+                    bg-transparent
+                    text-white
+                    align-items-center
+                    d-flex
+                    pl-1
+                    py-2
+                  "
+                  href="#!"
+                >
+                  <img src="../sbar-ftr-images/home.png" alt="" class="icon" />
+                  <span class="h6 mb-0">Home</span>
+                </a>
+                <a
+                  class="
+                    list-group-item list-group-item-action
+                    bg-transparent
+                    text-white
+                    align-items-center
+                    d-flex
+                    pl-1
+                    py-2
+                  "
+                  href="#!"
+                >
+                  <img
+                    src="../sbar-ftr-images/search.png"
+                    alt=""
+                    class="icon"
+                  />
+                  <span class="h6 mb-0">Search</span>
+                </a>
+                <a
+                  class="
+                    list-group-item list-group-item-action
+                    bg-transparent
+                    text-white
+                    align-items-center
+                    d-flex
+                    pl-1
+                    py-2
+                  "
+                  href="#!"
+                >
+                  <img
+                    src="../sbar-ftr-images/library-v2.png"
+                    alt=""
+                    class="icon"
+                  />
+                  <span class="h6 mb-0">Your Library</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- install app, hr, user -->
+          <div>
+            <div
+              class="
+                list-group list-group-flush
+                d-flex
+                mb-2
+                mt-auto
+                pl-2
+                align-self-baseline
+              "
+            >
+              <a
+                class="
+                  list-group-item list-group-item-action
+                  bg-transparent
+                  text-white
+                  align-items-center
+                  d-flex
+                  pl-1
+                  py-2
+                "
+                href="#!"
+              >
+                <i class="fal fa-arrow-circle-down fa-lg px-1"></i>
+                <span class="h6 mb-0">Install App</span>
+              </a>
+            </div>
+            <hr />
+            <div class="d-flex" style="align-items: center">
+              <img
+                src="https://picsum.photos/50/50?random=1"
+                alt=""
+                style="border-radius: 50px"
+              />
+              <p class="mb-0 pl-3">User 'The' Awesome</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div
+        class="col-10 px-0"
+        style="max-width: 100%; padding-bottom: 7rem"
+        id="main-content"
+      >
+        <div id="main-content-nav" class="container">
+          <div class="col d-flex" style="justify-content: center">
+            <ul class="nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link underline main-content-trending"
+                  id="trending-btn"
+                  href="#"
+                  >Trending</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link underline main-content-podcast"
+                  id="podcast-btn"
+                  href="#"
+                  >Podcast</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link underline main-content-moods"
+                  id="moods-btn"
+                  href="#"
+                  >Moods and Genres</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link underline main-content-new-releases"
+                  id="new-btn"
+                  href="#"
+                  >New Releases</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link underline main-content-discover"
+                  id="discover-btn"
+                  href="#"
+                  >Discover</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="container main-content-header d-flex"
+          style="max-width: 100%"
+        >
+          <h1>#THROWBACKTHURSDAY</h1>
+        </div>
+        <div class="container">
+          <div
+            class="row d-flex"
+            style="max-width: 100%"
+            id="append-cards-here"
+          >
+            <!-- all the  first cards are going here -->
+          </div>
+        </div>
+        <div class="container main-content-second-header d-flex">
+          <h1>Classificie</h1>
+        </div>
+        <div class="container d-flex">
+          <div class="row d-flex" id="append-mamma-here">
+            <!-- all the second cards are going here -->
           </div>
         </div>
       </div>
+
+      <footer class="player fixed-bottom">
+        <div class="row mx-2" style="height: 100%; align-content: center">
+          <!-- Creating the dive for different parts of the player -->
+          <div class="col-3 left-side mt-4">
+            <!-- This div is for song name and the image with heart icon and fullscreenicon -->
+            <div class="row">
+              <!-- This row is created to make the text and the images aligned -->
+              <div class="col-3 pr-0">
+                <img
+                  src="../sbar-ftr-images/horace.jpeg"
+                  alt="music name"
+                  style="width: 50px; height: 50px"
+                />
+              </div>
+              <div class="col-6 pl-0">
+                <h6 class="song-name">Song For My Father</h6>
+                <p class="artist-name">Horace Silver</p>
+              </div>
+              <div class="col-3">
+                <i class="far fa-heart"></i>
+                <i class="far fa-window-maximize"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-4 pt-4">
+            <!-- This div is for the media player consisting of the buttons like shuffle 
+                      back forward play and loop with the progress-bar -->
+            <div class="row mb-1">
+              <!-- This row is to create the icons for the media player -->
+              <div class="col text-center align-self-center player-icons">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="fas fa-play-circle play-button-media"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo"></i>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <!-- This row is for the progress bar of the song -->
+              <div class="col">
+                <div class="progress" style="height: 5px">
+                  <div
+                    class="progress-bar"
+                    role="progressbar"
+                    aria-valuenow="75"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    style="width: 10%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-3 d-flex" style="justify-content: flex-end">
+            <!-- This div is for playlist icon speaker and the volume icon with the progress bar -->
+            <div class="row mt-4">
+              <i class="fas fa-bars"></i>
+              <i class="fas fa-mobile-alt"></i>
+              <i class="fas fa-volume-down"></i>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                class="slider"
+                id="myRange"
+              />
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- my js -->
     <script src="./homepage.js"></script>
