@@ -16,6 +16,9 @@ span {
   padding: 0;
   box-sizing: border-box;
 }
+aside{
+  position: sticky;
+}
 
 #main-content {
   background: rgb(37, 70, 110);
@@ -25,9 +28,14 @@ span {
     rgba(4, 7, 11, 1) 100%
   );
 }
+img.icon:hover {
+  filter: brightness(100%) !important;
+}
+
 #main-content-nav {
   padding: 25px;
   font-size: 0.7rem;
+  margin-bottom: 30px;
 }
 
 #main-content-nav .nav .nav-item .nav-link {
@@ -43,6 +51,9 @@ span {
 #main-content-nav .nav .nav-item .nav-link:hover {
   color: white;
 }
+#main-content-nav .nav .nav-item .nav-link.main-active {
+  color: white;
+}
 
 .main-content-header h1 {
   font-size: 1.7rem;
@@ -51,9 +62,12 @@ span {
   color: white;
   font-weight: bolder;
 }
-/* #append-cards-here {
-  margin-left: 60px;
-} */
+#append-cards-here {
+  margin-left: 73px;
+}
+#append-mamma-here{
+  margin-left: 73px;
+}
 .underline {
   position: relative;
 }
@@ -68,6 +82,17 @@ span {
   left: 50%;
   transform: translateX(-50%);
 }
+.underline.main-active::after{
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  background: #0caf0c;
+  top: 80%;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
 
 .card {
   border: transparent;
@@ -75,7 +100,11 @@ span {
   text-align: center;
   color: #dbdcde;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 0.7rem;  
+}
+.card:hover{
+  cursor: pointer;
+  transform: rotateY(180deg);
 }
 .card-body {
   padding: 8px;
@@ -84,23 +113,74 @@ span {
 #sign-up-btn {
   border-radius: 20px;
   margin-bottom: 15px;
+  margin-left: 9px;
+  margin-right: 9px;
   cursor: pointer;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: black;
-  font-weight: bolder;
-  background-color: white;
+  font-weight: 800;
+  background-color: #ffffff;
   border: none;
+  padding: 7px;
+  font-size: 10px;
 }
+.footer-btn{
+  /* display: flex; */
+  -webkit-box-align: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #b3b3b3;
+  align-items: center;
+  border: none;
+  position: relative;
+  justify-content: center;
+  min-width: 32px;
+  margin-right: 12px;
+  margin-bottom: 5px;
+}
+.filter{
+  filter: brightness(150%);
+}
+
+.footer-btn:hover{
+color: white;
+}
+
+.playback-bar{
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 16px;
+  color: rgb(179, 179, 179);
+}
+
+
+#sign-up-btn:hover{
+  background-color: black;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
 #login-btn {
   border-radius: 20px;
+  margin-left: 9px;
+  margin-right: 9px;
   border: 2px solid #a1a1a0;
   letter-spacing: 1px;
   cursor: pointer;
   text-transform: uppercase;
   color: #dbdcde;
-  font-weight: bolder;
+  font-weight: 800;
   background-color: #161719;
+  padding: 7px;
+  font-size: 10px;
+}
+
+#login-btn:hover{
+  background-color: #dbdcde;
+  color:#161719;
 }
 
 .sidebar-component {

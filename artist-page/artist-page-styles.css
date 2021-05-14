@@ -51,6 +51,10 @@
 
 .h6 {
   font-size: 14px !important;
+  color: #a4a4a4;
+}
+.list-group-item>span:hover{
+  color: white !important;
 }
 img.icon {
   width: 1.5rem;
@@ -61,4 +65,7 @@ img.icon {
 #spotLogo {
   height: 60px;
   width: auto;
+}
+.user{
+  font-size: 13px;
 }
