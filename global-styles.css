@@ -52,6 +52,9 @@ div.row {
 img.icon {
   filter: brightness(50%) !important;
 }
+svg.btn-svg {
+  fill: #b2b2b1 !important;
+}
 #spotLogo {
   display: block;
   max-width: 80% !important;
@@ -59,14 +62,14 @@ img.icon {
   width: auto !important;
   height: auto !important;
 }
-.user{
+.user {
   font-size: 13px;
 }
-.song-name{
+.song-name {
   font-size: 0.9rem !important;
   padding-bottom: 0px;
 }
-.artist-name{
+.artist-name {
   font-size: 0.7rem !important;
   padding-top: 0px;
 }
@@ -85,7 +88,7 @@ apply the class='slideInLeft' to the element and it will slide :)
   animation-duration: 1.6s;
   animation-fill-mode: both;
 }
-.footer-btn{
+.footer-btn {
   /* display: flex; */
   -webkit-box-align: center;
   width: 32px;
