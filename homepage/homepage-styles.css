@@ -140,6 +140,9 @@ img.icon:hover {
   margin-right: 12px;
   margin-bottom: 5px;
 }
+.filter{
+  filter: brightness(150%);
+}
 
 .footer-btn:hover{
 color: white;

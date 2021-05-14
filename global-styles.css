@@ -85,3 +85,18 @@ apply the class='slideInLeft' to the element and it will slide :)
   animation-duration: 1.6s;
   animation-fill-mode: both;
 }
+.footer-btn{
+  /* display: flex; */
+  -webkit-box-align: center;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  color: #b3b3b3;
+  align-items: center;
+  border: none;
+  position: relative;
+  justify-content: center;
+  min-width: 32px;
+  margin-right: 12px;
+  margin-bottom: 5px;
+}
