@@ -136,9 +136,13 @@ img.icon:hover {
   border: none;
   position: relative;
   justify-content: center;
-  position: relative;
   min-width: 32px;
   margin-right: 12px;
+  margin-bottom: 5px;
+}
+
+.footer-btn:hover{
+color: white;
 }
 
 .playback-bar{
