@@ -15,11 +15,37 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./style.css" />
 
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="d-flex my-4" style="justify-content: space-around">
+      <button type="button" class="btn btn-success" onclick="showList()">
+        List albums
+      </button>
+      <button type="button" class="btn btn-danger" onclick="showUniqueList()">
+        Count unique
+      </button>
+    </div>
+    <div class="modal-fella d-none" id="modal-fella">
+      <button type="button" class="btn btn-danger" onclick="closeModal()">
+        Close me
+      </button>
+      <h4 id="all-or-unique"></h4>
+      <div id="lists">
+        <ul id="Eminem-albums">
+          <!-- albums going here -->
+        </ul>
+        <ul id="Metallica-albums">
+          <!-- albums going here -->
+        </ul>
+        <ul id="Behemoth-albums">
+          <!-- albums going here -->
+        </ul>
+      </div>
+    </div>
+
     <div class="main-container d-flex flex-column">
       <div id="eminem" class="artist-box">
         <!-- eminem goes here -->

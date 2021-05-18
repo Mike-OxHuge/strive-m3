@@ -1,6 +1,9 @@
 window.onload = function () {
   console.log("let's begin!");
   const artists = ["eminem", "metallica", "behemoth"];
+  const eminemAlbums = [];
+  const metallicaAlbums = [];
+  const behemothAlbums = [];
   for (let i = 0; i < artists.length; i++) {
     fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artists[i]}`,
@@ -21,7 +24,7 @@ window.onload = function () {
         bandName.innerText = `${artists[i]}`;
         band.appendChild(bandName);
         const row = document.createElement("div");
-        row.classList.add("row", "mx-2");
+        row.classList.add("row", "mx-2", "flex-row", "flex-nowrap");
         band.appendChild(row);
         for (let i = 0; i < data.data.length; i++) {
           let col = document.createElement("div");
@@ -33,14 +36,56 @@ window.onload = function () {
             <h5 class="card-title">${data.data[i].artist.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${data.data[i].album.title}</h6>
             <p class="card-text">${data.data[i].title}</p>
-            <a href='${data.data[i].preview}' target='_blank' class="btn btn-primary">Preview</a>
+            <a href='${data.data[i].preview}' target='_blank' class="btn btn-primary">Play preview</a>
           </div>
         </div>
         `;
           row.appendChild(col);
-          console.log(data.data[i]);
+          if (data.data[i].artist.name === "Eminem") {
+            eminemAlbums.push(data.data[i].album.title);
+          }
+          if (data.data[i].artist.name === "Metallica") {
+            metallicaAlbums.push(data.data[i].album.title);
+          }
+          if (data.data[i].artist.name === "Behemoth") {
+            behemothAlbums.push(data.data[i].album.title);
+          }
         }
       })
+
       .catch((err) => console.error(err));
+  }
+  // .then(() => {
+  //   console.log("eminem");
+  //   console.log(eminemAlbums);
+  //   console.log("metallica");
+  //   console.log(metallicaAlbums);
+  //   console.log("behemoth");
+  //   console.log(behemothAlbums);
+  // })
+};
+let isShown = false;
+const showList = function () {
+  if (!isShown) {
+    document.getElementById("modal-fella").classList.remove("d-none");
+    document.getElementById("all-or-unique").innerText = "All albums:";
+    isShown = !isShown;
+  }
+};
+
+const showUniqueList = function () {
+  if (!isShown) {
+    document.getElementById("modal-fella").classList.remove("d-none");
+    document.getElementById("all-or-unique").innerText = "Unique albums:";
+    isShown = !isShown;
+  }
+};
+
+const closeModal = function () {
+  if (isShown) {
+    document.getElementById("modal-fella").classList.add("d-none");
+    document.getElementById("all-or-unique").innerText = "";
+    document.getElementById("lists").innerHTML = "";
+    isShown = !isShown;
   }
 };
