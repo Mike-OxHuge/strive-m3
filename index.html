@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Hello, world!</title>
   </head>
   <body>
-    <p>/* */</p>
-    <p>
-      /* 1) MAX CHAR Given a string, return the character that is most commonly
-      used in the string. --- Examples maxChar("abcccccccd") === "c"
-      maxChar("apple 1231111") === "1" */ /* 2) ANAGRAMS Check to see if two
-      provided strings are anagrams of each other. One string is an anagram of
-      another if it uses the same characters in the same quantity. Only consider
-      characters, not spaces or punctuation. Consider capital letters to be the
-      same as lower case --- Examples anagrams('rail safety', 'fairy tales') -->
-      True anagrams('RAIL! SAFETY!', 'fairy tales') --> True anagrams('Hi
-      there', 'Bye there') --> False */ /* 3) ANAGRAMS 2 Given a word and a list
-      of possible anagrams, select the correct sublist. --- Examples "listen"
-      and a list of candidates like "enlists" "google" "inlets" "banana" the
-      program should return a list containing "inlets". */ /* 4) PALINDROME
-      Given a string, return true if the string is a palindrome or false if it
-      is not. Palindromes are strings that form the same word if it is reversed.
-      Do include spaces and punctuation in determining if the string is a
-      palindrome. --- Examples: palindrome("abba") === true
-      palindrome("abcdefg") === false */ /* 5) REVERSE INT Given an integer,
-      return an integer that is the reverse ordering of numbers. --- Examples
-      reverseInt(15) === 51 reverseInt(981) === 189 reverseInt(500) === 5
-      reverseInt(-15) === -51 reverseInt(-90) === -9 */ /* 6) STEPS Write a
-      function that accepts a positive number N. The function should console log
-      a step shape with N levels using the # character. Make sure the step has
-      spaces on the right hand side! --- Examples steps(2) '# ' '##' steps(3) '#
-      ' '## ' '###' steps(4) '# ' '## ' '### ' '####' */ /* 7) REVERSE STRING
-      Given a string, return a new string with the reversed order of characters
-      --- Examples reverse('apple') === 'leppa' reverse('hello') === 'olleh'
-      reverse('Greetings!') === '!sgniteerG' */ /* 8) CHUNK Given an array and
-      chunk size, divide the array into many subarrays where each subarray is of
-      length size --- Examples chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
-      chunk([1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]] chunk([1, 2, 3, 4, 5,
-      6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]] chunk([1, 2, 3, 4, 5], 4)
-      --> [[ 1, 2, 3, 4], [5]] chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
-      */ /* 9) PYRAMID Write a function that accepts a positive number N. The
-      function should console log a pyramid shape with N levels using the #
-      character. Make sure the pyramid has spaces on both the left and right
-      hand sides --- Examples pyramid(1) '#' pyramid(2) ' # ' '###' pyramid(3) '
-      # ' ' ### ' '#####' */ /* 10) SPYRAL MATRIX Write a function that accepts
-      an integer N and returns a NxN spiral matrix. --- Examples matrix(2) [[1,
-      2], [4, 3]] matrix(3) [[1, 2, 3], [8, 9, 4], [7, 6, 5]] matrix(4) [[1, 2,
-      3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]] */
-    </p>
+    <h1>Hello, world!</h1>
+    <div class="main-container d-flex">
+      <div id="eminem" class="artist-box">
+        <!-- eminem goes here -->
+      </div>
+
+      <div id="metallica" class="artist-box">
+        <!-- metallica goes here -->
+      </div>
+
+      <div id="behemoth" class="artist-box">
+        <!-- behemoth goes here -->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./index.js"></script>
   </body>
 </html>
