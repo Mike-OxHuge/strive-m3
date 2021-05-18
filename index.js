@@ -16,15 +16,18 @@ window.onload = function () {
     )
       .then((response) => response.json())
       .then((data) => {
-        const eminem = document.getElementById(`${artists[i]}`);
+        const band = document.getElementById(`${artists[i]}`);
+        const bandName = document.createElement("h2");
+        bandName.innerText = `${artists[i]}`;
+        band.appendChild(bandName);
         const row = document.createElement("div");
         row.classList.add("row", "mx-2");
-        eminem.appendChild(row);
+        band.appendChild(row);
         for (let i = 0; i < data.data.length; i++) {
           let col = document.createElement("div");
-          col.classList.add("col-12", "col-md-4");
+          col.classList.add("col-12", "col-md-2");
           col.innerHTML = `
-        <div class="card">
+        <div class="card my-2">
           <img src="${data.data[i].album.cover_big}" class="card-img-top" alt="${data.data[i].album.title} album cover">
           <div class="card-body">
             <h5 class="card-title">${data.data[i].artist.name}</h5>
