@@ -1,9 +1,10 @@
+const artists = ["Eminem", "Metallica", "Behemoth"];
+const eminemAlbums = [];
+const metallicaAlbums = [];
+const behemothAlbums = [];
+
 window.onload = function () {
   console.log("let's begin!");
-  const artists = ["eminem", "metallica", "behemoth"];
-  const eminemAlbums = [];
-  const metallicaAlbums = [];
-  const behemothAlbums = [];
   for (let i = 0; i < artists.length; i++) {
     fetch(
       `https://striveschool-api.herokuapp.com/api/deezer/search?q=${artists[i]}`,
@@ -52,28 +53,41 @@ window.onload = function () {
           }
         }
       })
-
       .catch((err) => console.error(err));
   }
-  // .then(() => {
-  //   console.log("eminem");
-  //   console.log(eminemAlbums);
-  //   console.log("metallica");
-  //   console.log(metallicaAlbums);
-  //   console.log("behemoth");
-  //   console.log(behemothAlbums);
-  // })
 };
 let isShown = false;
 const showList = function () {
+  document.getElementById("Eminem-albums").innerHTML = "";
+  document.getElementById("Metallica-albums").innerHTML = "";
+  document.getElementById("Behemoth-albums").innerHTML = "";
   if (!isShown) {
     document.getElementById("modal-fella").classList.remove("d-none");
     document.getElementById("all-or-unique").innerText = "All albums:";
     isShown = !isShown;
+    for (let i = 0; i < eminemAlbums.length; i++) {
+      let li = document.createElement("li");
+      li.innerText = `${eminemAlbums[i]}`;
+      document.getElementById("Eminem-albums").appendChild(li);
+    }
+    for (let i = 0; i < metallicaAlbums.length; i++) {
+      let li = document.createElement("li");
+      li.innerText = `${metallicaAlbums[i]}`;
+      document.getElementById("Metallica-albums").appendChild(li);
+    }
+    for (let i = 0; i < behemothAlbums.length; i++) {
+      let li = document.createElement("li");
+      li.innerText = `${behemothAlbums[i]}`;
+      document.getElementById("Behemoth-albums").appendChild(li);
+    }
+    console.log(eminemAlbums);
   }
 };
 
 const showUniqueList = function () {
+  document.getElementById("Eminem-albums").innerHTML = "";
+  document.getElementById("Metallica-albums").innerHTML = "";
+  document.getElementById("Behemoth-albums").innerHTML = "";
   if (!isShown) {
     document.getElementById("modal-fella").classList.remove("d-none");
     document.getElementById("all-or-unique").innerText = "Unique albums:";
@@ -85,7 +99,7 @@ const closeModal = function () {
   if (isShown) {
     document.getElementById("modal-fella").classList.add("d-none");
     document.getElementById("all-or-unique").innerText = "";
-    document.getElementById("lists").innerHTML = "";
+    // document.getElementById("lists").innerHTML = "";
     isShown = !isShown;
   }
 };
