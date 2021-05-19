@@ -1,1 +1,1 @@
-console.log("test-mykola");
+console.log("test-mykola " + "200");
