@@ -11,7 +11,6 @@ fetch("https://picsum.photos/v2/list?page=1&limit=9", {
     for (let i = 0; i < primaryImages.length; i++) {
       primaryArray.push(primaryImages[i]);
     }
-    // console.log(primaryArray);
   })
   .catch((err) => console.log(err));
 
@@ -23,7 +22,6 @@ fetch("https://picsum.photos/v2/list?page=2&limit=9", {
     for (let i = 0; i < secondaryImages.length; i++) {
       secondaryArray.push(secondaryImages[i]);
     }
-    // console.log(secondaryArray);
   })
   .catch((err) => console.log(err));
 
@@ -32,12 +30,10 @@ const secondaryImages = document.getElementById("secondary-images");
 
 const svg = document.querySelectorAll(".card svg:first-of-type");
 const card = document.querySelectorAll(".card");
-// console.log(svg);
-// console.log(card);
 
 primaryImages.onclick = function () {
   let img = document.querySelectorAll(".img-fluid");
-  //   console.log(img);
+
   if (img.length > 8) {
     for (let i = 0; i < img.length; i++) {
       img[i].remove();
@@ -50,15 +46,14 @@ primaryImages.onclick = function () {
     img.src = primaryArray[i].download_url;
     img.classList.add("img-fluid", "card-img-top");
     card[i].prepend(img);
+    document.querySelectorAll("small.text-muted")[i].innerText =
+      primaryArray[i].id;
   }
-
-  //   console.log(primaryArray);
-  // console.log(secondaryArray);
 };
 
 secondaryImages.onclick = function () {
   let img = document.querySelectorAll(".img-fluid");
-  //   console.log(img);
+
   if (img.length > 8) {
     for (let i = 0; i < img.length; i++) {
       img[i].remove();
@@ -71,8 +66,7 @@ secondaryImages.onclick = function () {
     img.src = secondaryArray[i].download_url;
     img.classList.add("img-fluid", "card-img-top");
     card[i].prepend(img);
+    document.querySelectorAll("small.text-muted")[i].innerText =
+      secondaryArray[i].id;
   }
-
-  //   console.log(primaryArray);
-  //   console.log(secondaryArray);
 };
