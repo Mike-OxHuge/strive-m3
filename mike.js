@@ -34,7 +34,7 @@ const card = document.querySelectorAll(".card");
 primaryImages.onclick = function () {
   let img = document.querySelectorAll(".img-fluid");
 
-  if (img.length > 8) {
+  if (img.length > 0) {
     for (let i = 0; i < img.length; i++) {
       img[i].remove();
     }
@@ -54,7 +54,7 @@ primaryImages.onclick = function () {
 secondaryImages.onclick = function () {
   let img = document.querySelectorAll(".img-fluid");
 
-  if (img.length > 8) {
+  if (img.length > 0) {
     for (let i = 0; i < img.length; i++) {
       img[i].remove();
     }
