@@ -1,9 +1,9 @@
 // I couldn't get an array of 9 pictures from those dodgy API that you provided to us.
 
-primaryArray = [];
-secondaryArray = [];
+const primaryArray = [];
+const secondaryArray = [];
 
-fetch("https://picsum.photos/v2/list?page=1&limit=9", {
+fetch("https://picsum.photos/v2/list?page=2&limit=9", {
   method: "GET",
 })
   .then((response) => response.json())
@@ -14,7 +14,7 @@ fetch("https://picsum.photos/v2/list?page=1&limit=9", {
   })
   .catch((err) => console.log(err));
 
-fetch("https://picsum.photos/v2/list?page=2&limit=9", {
+fetch("https://picsum.photos/v2/list?page=3&limit=9", {
   method: "GET",
 })
   .then((response) => response.json())
