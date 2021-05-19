@@ -1,2 +1,2 @@
 live deployment:
-https://strive-m3-day2.netlify.app/
+https://strive-m3-day3.netlify.app/
