@@ -36,13 +36,43 @@ const card = document.querySelectorAll(".card");
 // console.log(card);
 
 primaryImages.onclick = function () {
+  let img = document.querySelectorAll(".img-fluid");
+  //   console.log(img);
+  if (img.length > 8) {
+    for (let i = 0; i < img.length; i++) {
+      img[i].remove();
+    }
+  }
+
   for (let i = 0; i < svg.length; i++) {
     svg[i].remove();
     let img = document.createElement("img");
     img.src = primaryArray[i].download_url;
-    img.classList.add("fluid", "card-img-top");
-    card[i].appendChild(img);
+    img.classList.add("img-fluid", "card-img-top");
+    card[i].prepend(img);
   }
+
+  //   console.log(primaryArray);
+  // console.log(secondaryArray);
+};
+
+secondaryImages.onclick = function () {
+  let img = document.querySelectorAll(".img-fluid");
+  //   console.log(img);
+  if (img.length > 8) {
+    for (let i = 0; i < img.length; i++) {
+      img[i].remove();
+    }
+  }
+
+  for (let i = 0; i < svg.length; i++) {
+    svg[i].remove();
+    let img = document.createElement("img");
+    img.src = secondaryArray[i].download_url;
+    img.classList.add("img-fluid", "card-img-top");
+    card[i].prepend(img);
+  }
+
   //   console.log(primaryArray);
   //   console.log(secondaryArray);
 };
