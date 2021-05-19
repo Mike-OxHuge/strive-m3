@@ -1,14 +1,19 @@
 
+const primaryArray = []
+
 window.onload = function () {
   const btn = document.querySelectorAll(".btn-group button:last-of-type");
-  const svg = document.querySelectorAll(".album")
+  const svg= document.querySelectorAll(".card svg:first-of-type")
+  const small = document.getElementsByTagName("small")
+
   for (let i = 0; i < btn.length; i++) {
     btn[i].innerText = " "  
     btn[i].innerText = "Hide";
     btn[i].addEventListener("click", () => {
-            album[i].parentNode.removeChild("svg")
+            svg[i].classList.add("d-none")
     })
-  }
+   
+ }
+}
 //   console.log(btn);
-};
 
