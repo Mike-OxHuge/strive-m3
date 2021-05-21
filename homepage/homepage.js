@@ -1,4 +1,5 @@
 console.log("sarah");
+console.log("Samuel");
 
 var trendingQuery = [];
 var trendingAlbums = [];
