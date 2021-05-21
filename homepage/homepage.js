@@ -1,12 +1,10 @@
-console.log("sarah");
-console.log("Samuel");
-
 var trendingQuery = [];
 var trendingAlbums = [];
 fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
   .then((res) => res.json())
   .then((queen) => {
     trendingQuery = queen.data;
+    console.log('example path to queen albums for the album page: ' + trendingQuery[0].album.id) // array of objects
   })
   .then(() => populate())
   .catch((err) => console.log(err));
