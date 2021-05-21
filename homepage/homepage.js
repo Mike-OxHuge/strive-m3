@@ -1,4 +1,145 @@
+var trendingQuery = [];
+var trendingAlbums = [];
+fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
+  .then((res) => res.json())
+  .then((queen) => {
+    trendingQuery = queen.data;
+    console.log(trendingQuery);
+  })
+  .then(() => populate())
+  .catch((err) => console.log(err));
+
+function populate() {
+  var papa = document.getElementById("append-cards-here");
+  let listOfClasses = [
+    "col-12",
+    "col-sm-6",
+    "col-md-4",
+    "col-lg-2",
+    "d-flex",
+    "px-1",
+    "fadeIn",
+  ];
+  for (let i = 0; i < trendingQuery.length; i++) {
+    trendingAlbums.push(trendingQuery[i].album);
+  }
+  for (let i = 0; i < trendingAlbums.length; i++) {
+    let div = document.createElement("div");
+    div.classList.add(...listOfClasses);
+    div.innerHTML = `<div class="card img-fluid dynamic-render" id='${trendingAlbums[i].id}'> 
+    <img src=${trendingAlbums[i].cover_medium} class="card-img-top"
+    alt="..."/><div class="card-body"><p class="card-text">${trendingAlbums[i].title}</p></div></div>`;
+    papa.appendChild(div);
+  }
+  var dynamicRender = document.querySelectorAll(".dynamic-render");
+
+  dynamicRender.forEach((el) => el.addEventListener("click", dynamic));
+}
+function dynamic() {
+  var savedId = this.id;
+  console.log("ID of this album is: " + savedId);
+
+  let albumInfo = trendingAlbums.find(
+    (element) => element.id === parseInt(savedId)
+  );
+  console.log("Get album tracks from: " + albumInfo.tracklist);
+
+  document.getElementById("main-content").innerHTML = `
+  <div class="album-container">
+  <div class="row">
+    <div class="col-6 mt-4" id="artist-infos">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <img
+            src="${albumInfo.cover}"
+            // CHANGE TO ALBUM COVER
+            alt="queenImg"
+            class="img-fluid w-50"
+          />
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+          <h3 class="text-center" style="max-width: 50%">
+            ${albumInfo.title}
+          </h3>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-n2">
+          <span class="text-muted text-center">${trendingQuery[0].artist.name}</span>
+          <div class="my-5">
+            <div>
+              <button
+                type="button"
+                class="mx-2 btn btn-success"
+                style="border-radius: 20px"
+              >
+                <span
+                  class="px-5 my-2 text-center"
+                  style="font-weight: 300"
+                  >PLAY</span
+                >
+              </button>
+            </div>
+            <div class="text-muted mt-1 text-center">
+              <span>1974 <!-- this will need to be changed if we have time -->
+                </span>
+            </div>
+          </div>
+          <div id="Options">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-ellipsis-h text-white"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 mt-4" id="songs-container">
+      <!--SONGS GO HERE-->
+      <table>
+      </table>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>`;
+
+  let table = document.querySelector("table");
+  table.innerHTML = `<tr><td>Title of song</td></tr>`; // to be changed dynamically below when I can get access
+  var tracklist = [];
+  function thisAlbum() {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${savedId}/`)
+      .then((res) => res.json())
+
+      .then((jsontracks) => (tracklist = jsontracks.tracks.data))
+
+      // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
+      //   .then((res) => res.json())
+      //   .then((track) => {
+      //     chosenTracks = track.data;
+      //     console.log(chosenTracks)
+      //   })
+      .then(() => console.log(tracklist))
+      .catch((err) => console.log(err));
+  }
+
+  thisAlbum();
+
+  // export default savedId;
+  // window.location.href = "/album-page/album-page.html";
+}
+
 window.onload = function () {
+  // console.log(
+  //   `
+  // array length: ${queenAlbums.length}
+  // array itself:
+  // `
+  // );
+
+  // On the home page, there should be albums
+  //   Parameter: album id
+
+  // Endpoint : https://striveschool-api.herokuapp.com/api/deezer/album/{id}
+
+  // Example: https://striveschool-api.herokuapp.com/api/deezer/album/75621062
+
   // All arrays containing cards for main-content page
   let cards = [
     {
@@ -148,23 +289,6 @@ window.onload = function () {
   ];
 
   // append throwbackThursday Cards
-  let papa = document.getElementById("append-cards-here");
-  let listOfClasses = [
-    "col-12",
-    "col-sm-6",
-    "col-md-4",
-    "col-lg-2",
-    "d-flex",
-    "px-1",
-    "fadeIn"
-  ];
-  for (let i = 0; i < cards.length; i++) {
-    let div = document.createElement("div");
-    div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"> <a href="/album-page/album-page.html"><img src=${cards[i].img} class="card-img-top"
-    alt="..."/></a><div class="card-body"><p class="card-text">${cards[i].title}</p></div></div>`;
-    papa.appendChild(div);
-  }
 
   // append Classifichie album covers
   let mamma = document.getElementById("append-mamma-here");
@@ -286,9 +410,6 @@ window.onload = function () {
   //     hover[i].classList.add("img.icon:hover")
   //   }
   // }
-    
-  
-  
 };
 
 /* below here adding a function for main content links to change display according to the link name*/

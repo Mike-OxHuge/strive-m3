@@ -1,3 +1,8 @@
+// for artist page, this link given by strive: https://striveschool-api.herokuapp.com/api/deezer/artist/412
+// we want albums by artist
+// pathway is:-
+
+
 window.onload = function () {
   let appendAlbums = document.getElementById("append-albums");
   let theTitle = document.getElementById("the-title");

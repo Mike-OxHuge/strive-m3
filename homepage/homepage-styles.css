@@ -16,7 +16,7 @@ span {
   padding: 0;
   box-sizing: border-box;
 }
-aside{
+aside {
   position: sticky;
 }
 
@@ -65,7 +65,7 @@ img.icon:hover {
 #append-cards-here {
   margin-left: 73px;
 }
-#append-mamma-here{
+#append-mamma-here {
   margin-left: 73px;
 }
 .underline {
@@ -82,7 +82,7 @@ img.icon:hover {
   left: 50%;
   transform: translateX(-50%);
 }
-.underline.main-active::after{
+.underline.main-active::after {
   content: "";
   position: absolute;
   height: 0.2em;
@@ -91,7 +91,6 @@ img.icon:hover {
   width: 30%;
   left: 50%;
   transform: translateX(-50%);
-
 }
 
 .card {
@@ -100,11 +99,11 @@ img.icon:hover {
   text-align: center;
   color: #dbdcde;
   font-weight: 600;
-  font-size: 0.7rem;  
+  font-size: 0.7rem;
 }
-.card:hover{
+.card:hover {
   cursor: pointer;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
 }
 .card-body {
   padding: 8px;
@@ -125,7 +124,7 @@ img.icon:hover {
   padding: 7px;
   font-size: 10px;
 }
-.footer-btn{
+.footer-btn {
   /* display: flex; */
   -webkit-box-align: center;
   width: 32px;
@@ -140,15 +139,15 @@ img.icon:hover {
   margin-right: 12px;
   margin-bottom: 5px;
 }
-.filter{
+.filter {
   filter: brightness(150%);
 }
 
-.footer-btn:hover{
-color: white;
+.footer-btn:hover {
+  color: white;
 }
 
-.playback-bar{
+.playback-bar {
   font-size: 11px;
   font-weight: 400;
   letter-spacing: normal;
@@ -156,8 +155,7 @@ color: white;
   color: rgb(179, 179, 179);
 }
 
-
-#sign-up-btn:hover{
+#sign-up-btn:hover {
   background-color: black;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -178,9 +176,9 @@ color: white;
   font-size: 10px;
 }
 
-#login-btn:hover{
+#login-btn:hover {
   background-color: #dbdcde;
-  color:#161719;
+  color: #161719;
 }
 
 .sidebar-component {

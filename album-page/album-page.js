@@ -1,4 +1,13 @@
+// for album page, this link given by strive: https://striveschool-api.herokuapp.com/api/deezer/album/75621062
+// we want track and duration from an individual album
+// pathway FROM OUR TRENDINGQUERY ARRAY is:- trendingQuery[0].album.title [we will also need ids to be populated, i guess: trendingQuery[0].album.id]
+
+
+import { savedId, trendingAlbums } from "../homepage/homepage";
+console.log(savedId);
 window.onload = function () {
+  console.log(trendingAlbums);
+  console.log(savedId);
   // later populate from an array
   let songs = [
     {
