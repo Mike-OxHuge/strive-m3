@@ -90,32 +90,31 @@ function dynamic() {
         </div>
       </div>
     </div>
-    <div class="col-6 mt-4" id="songs-container">
+    <div class="col-6 mt-4">
+    <ul id="songs-container"></ul>
       <!--SONGS GO HERE-->
-      <table>
-      </table>
+
     </div>
   </div>
     </div>
   </div>
 </div>`;
 
-  let table = document.querySelector("table");
-  table.innerHTML = `<tr><td>Title of song</td></tr>`; // to be changed dynamically below when I can get access
+  let parent = document.getElementById("songs-container");
+  parent.innerHTML = ""; // to be changed dynamically below when I can get access
   var tracklist = [];
   function thisAlbum() {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${savedId}/`)
       .then((res) => res.json())
-
       .then((jsontracks) => (tracklist = jsontracks.tracks.data))
-
-      // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
-      //   .then((res) => res.json())
-      //   .then((track) => {
-      //     chosenTracks = track.data;
-      //     console.log(chosenTracks)
-      //   })
-      .then(() => console.log(tracklist))
+      .then(() => {
+        console.log(tracklist[0].title);
+        for (let i = 0; i < tracklist.length; i++) {
+          let li = document.createElement("li");
+          li.innerText = tracklist[i].title;
+          parent.appendChild(li);
+        }
+      })
       .catch((err) => console.log(err));
   }
 
