@@ -61,7 +61,7 @@ function dynamic() {
           </h3>
         </div>
         <div class="d-flex flex-column align-items-center mt-n2">
-          <span class="text-muted text-center">Queen</span> <!-- this will need to be changed if we have time -->
+          <span class="text-muted text-center">${trendingQuery[0].artist.name}</span>
           <div class="my-5">
             <div>
               <button
@@ -99,7 +99,22 @@ function dynamic() {
 </div>`
 
 let table = document.querySelector('table')
-table.inenrHTML = `<tr><td>Title of song</td></tr>`
+table.innerHTML = `<tr><td>Title of song</td></tr>` // to be changed dynamically below when I can get access
+
+var chosenAlbum = [];
+
+function thisAlbum() {
+fetch(`${albumInfo.tracklist}`)
+  .then((res) => res.json())
+  .then((track) => {
+    chosenTracks = track.data;
+    console.log(chosenTracks)
+  })
+  .then(() => console.log("hello"))
+  .catch((err) => console.log(err));
+}
+
+thisAlbum()
 
   // export default savedId;
   // window.location.href = "/album-page/album-page.html";
