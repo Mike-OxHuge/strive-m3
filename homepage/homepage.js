@@ -1,3 +1,5 @@
+console.log(sarah)
+
 var trendingQuery = [];
 var trendingAlbums = [];
 fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
