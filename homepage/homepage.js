@@ -102,12 +102,12 @@ function dynamic() {
 
   let table = document.querySelector("table");
   table.innerHTML = `<tr><td>Title of song</td></tr>`; // to be changed dynamically below when I can get access
-
+  var tracklist = [];
   function thisAlbum() {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${savedId}/`)
       .then((res) => res.json())
 
-      .then((tracklist) => console.log(tracklist.tracks.data))
+      .then((jsontracks) => (tracklist = jsontracks.tracks.data))
 
       // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
       //   .then((res) => res.json())
@@ -115,7 +115,7 @@ function dynamic() {
       //     chosenTracks = track.data;
       //     console.log(chosenTracks)
       //   })
-      .then(() => console.log("hello"))
+      .then(() => console.log(tracklist))
       .catch((err) => console.log(err));
   }
 
