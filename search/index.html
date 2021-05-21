@@ -23,7 +23,56 @@
     />
     <link rel="stylesheet" href="../artist-page/artist-page-styles.css" />
     <link rel="stylesheet" href="../album-page/album-page-styles.css" />
-    <link rel="stylesheet" href="homepage-styles.css" />
+    <link rel="stylesheet" href="../homepage/homepage-styles.css" />
+
+
+
+<style>
+    .navigator{
+        color: #fff;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        padding-top: 0;
+    }
+
+
+ .search-input{
+    border: none;
+    border-radius: 500px;
+    color: #000;
+    height: 40px;
+    padding: 6px 48px;
+    text-overflow: ellipsis;
+    width: 150%;
+}
+
+.search-input:focus{
+    border: none;
+}
+
+.nav-item{
+    border: none;
+}
+
+.artist-container{
+    border: 1px solid black;
+    -webkit-box-shadow: 2px 2px 18px 2px #000000; 
+box-shadow: 2px 2px 18px 2px #000000;
+    width: 400px;
+    height: 200px;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    background: rgb(37, 70, 110);
+}
+    .sample:hover{
+        background-color:grey;
+        cursor: pointer;
+    }
+</style>
+
+
+
+
   </head>
   <body style="background: #181818; min-width: 100vw">
     <div class="row ml-0" style="max-width: 100vw">
@@ -57,7 +106,7 @@
                     pl-1
                     py-2
                   "
-                  href="homepage.html"
+                  href="../homepage/homepage.html"
                 >
                   <img src="../sbar-ftr-images/home.png" alt="" class="icon" />
                   <span class="h6 mb-0">Home</span>
@@ -72,7 +121,7 @@
                     pl-1
                     py-2
                   "
-                  href="../search/index.html"
+                  href="/artist-page/artist-page.html"
                 >
                   <img
                     src="../sbar-ftr-images/search.png"
@@ -133,55 +182,24 @@
           </div>
         </div>
       </aside>
-      
       <div
         class="col-10"
         style="max-width: 100%; padding-bottom: 7rem"
         id="main-content"
       >
         <div id="main-content-nav" class="container">
-          <div class="col d-flex" style="justify-content: center">
+          <div class="col d-flex">
             <ul class="nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link underline main-content-trending"
-                  id="trending-btn"
-                  href="#"
-                  >Trending</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link underline main-content-podcast"
-                  id="podcast-btn"
-                  href="#"
-                  >Podcast</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link underline main-content-moods"
-                  id="moods-btn"
-                  href="#"
-                  >Moods and Genres</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link underline main-content-new-releases"
-                  id="new-btn"
-                  href="#"
-                  >New Releases</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link underline main-content-discover"
-                  id="discover-btn"
-                  href="#"
-                  >Discover</a
-                >
-              </li>
+                <li class="nav-item">
+                  <a href=""> <span class="navigator pr-4"> < </span> </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href=""><span class="navigator ">></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <input type="text" name="" id="" class="search-input mt-0 ml-3" onkeypress="search()" placeholder="Artists, songs, podcast">
+                  </li>
             </ul>
           </div>
         </div>
@@ -189,19 +207,24 @@
           class="container main-content-header d-flex"
           style="max-width: 100%"
         >
-          <h1>#THROWBACKTHURSDAY</h1>
+          <h1 class="hidden">Browse all</h1>
         </div>
-        <div class="container" id="container">
-          <div
-            class="row d-flex"
-            style="max-width: 100%"
-            id="append-cards-here"
-          >
-            <!-- all the  first cards are going here -->
-          </div>
-        </div>
+        <div class="mb-3"></div>
+        <section id="home-cards">
+            <div class="artist">
+                <div class="row artist-row">
+            
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row album-row">
+                    <!-- render from api -->
+                </div>
+            </div>
+
+        </section>
         <div class="container main-content-second-header d-flex">
-          <h1>Classificie</h1>
         </div>
         <div class="container d-flex">
           <div class="row d-flex" id="append-mamma-here">
@@ -261,7 +284,7 @@
       </footer>
     </div>
     <!-- my js -->
-    <script type="module" src="./homepage.js"></script>
+    <script src="./homepage.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
@@ -279,5 +302,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="app.js"></script>
   </body>
 </html>
