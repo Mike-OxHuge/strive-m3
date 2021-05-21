@@ -4,7 +4,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
   .then((res) => res.json())
   .then((queen) => {
     trendingQuery = queen.data;
-    console.log('example path to queen albums for the album page: ' + trendingQuery[0].album.id) // array of objects
+    console.log(trendingQuery)
   })
   .then(() => populate())
   .catch((err) => console.log(err));
@@ -26,7 +26,7 @@ function populate() {
   for (let i = 0; i < trendingAlbums.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid dynamic-render" id='album-${trendingAlbums[i].id}'> 
+    div.innerHTML = `<div class="card img-fluid dynamic-render" id='${trendingAlbums[i].id}'> 
     <img src=${trendingAlbums[i].cover_medium} class="card-img-top"
     alt="..."/><div class="card-body"><p class="card-text">${trendingAlbums[i].title}</p></div></div>`;
     papa.appendChild(div);
@@ -37,9 +37,72 @@ function populate() {
 }
 function dynamic() {
   var savedId = this.id;
-  console.log(savedId);
+  console.log("ID of this album is: " + savedId);
+
+  let albumInfo = trendingAlbums.find(element => element.id === parseInt(savedId))
+  console.log('Get album tracks from: ' + albumInfo.tracklist)
+
+  document.getElementById('main-content').innerHTML = `
+  <div class="album-container">
+  <div class="row">
+    <div class="col-6 mt-4" id="artist-infos">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <img
+            src="${albumInfo.cover}"
+            // CHANGE TO ALBUM COVER
+            alt="queenImg"
+            class="img-fluid w-50"
+          />
+        </div>
+        <div class="d-flex justify-content-center mt-2">
+          <h3 class="text-center" style="max-width: 50%">
+            ${albumInfo.title}
+          </h3>
+        </div>
+        <div class="d-flex flex-column align-items-center mt-n2">
+          <span class="text-muted text-center">Queen</span> <!-- this will need to be changed if we have time -->
+          <div class="my-5">
+            <div>
+              <button
+                type="button"
+                class="mx-2 btn btn-success"
+                style="border-radius: 20px"
+              >
+                <span
+                  class="px-5 my-2 text-center"
+                  style="font-weight: 300"
+                  >PLAY</span
+                >
+              </button>
+            </div>
+            <div class="text-muted mt-1 text-center">
+              <span>1974 <!-- this will need to be changed if we have time -->
+                </span>
+            </div>
+          </div>
+          <div id="Options">
+            <i class="far fa-heart"></i>
+            <i class="fas fa-ellipsis-h text-white"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6 mt-4" id="songs-container">
+      <!--SONGS GO HERE-->
+      <table>
+      </table>
+    </div>
+  </div>
+    </div>
+  </div>
+</div>`
+
+let table = document.querySelector('table')
+table.inenrHTML = `<tr><td>Title of song</td></tr>`
+
   // export default savedId;
-  window.location.href = "/album-page/album-page.html";
+  // window.location.href = "/album-page/album-page.html";
 }
 
 window.onload = function () {
