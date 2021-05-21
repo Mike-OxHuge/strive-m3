@@ -12,7 +12,6 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
   .catch((err) => console.log(err));
 
 function populate() {
-  console.log(trendingQuery.length);
   var papa = document.getElementById("append-cards-here");
   let listOfClasses = [
     "col-12",
@@ -29,17 +28,20 @@ function populate() {
   for (let i = 0; i < trendingAlbums.length; i++) {
     let div = document.createElement("div");
     div.classList.add(...listOfClasses);
-    div.innerHTML = `<div class="card img-fluid"> <a href="/album-page/album-page.html"><img src=${trendingAlbums[i].cover_medium} class="card-img-top"
-    alt="..."/></a><div class="card-body"><p class="card-text">${trendingAlbums[i].title}</p></div></div>`;
+    div.innerHTML = `<div class="card img-fluid dynamic-render" id='album-${trendingAlbums[i].id}'> 
+    <img src=${trendingAlbums[i].cover_medium} class="card-img-top"
+    alt="..."/><div class="card-body"><p class="card-text">${trendingAlbums[i].title}</p></div></div>`;
     papa.appendChild(div);
   }
+  var dynamicRender = document.querySelectorAll(".dynamic-render");
 
-  console.log(trendingAlbums);
+  dynamicRender.forEach((el) => el.addEventListener("click", dynamic));
 }
-// console.log(queenAlbums);
-// setTimeout(function () {
-//   console.log(queenAlbums);
-// }, 3000);
+function dynamic() {
+  // document.getElementById("container").innerHTML = "BALLS";
+  console.log(this);
+  // this.innerHTML = "<h1>clicked</h1>";
+}
 
 window.onload = function () {
   // console.log(
