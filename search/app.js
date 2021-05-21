@@ -36,7 +36,6 @@ function search(){
                 <img src="${album.artist.picture_small}" class="rounded-circle img-fluid mt-3 ml-3" style="width: 100px; height: 100px;" alt="...">
                 <p><span class="artist-name ml-4 text-white" style = "font-size: large;">${album.artist.name}</span></p>
             </div>`
-            
                 cards.innerHTML += `<div class="mb-4 text-center col-sm-6 col-md-4 col-lg-2">
                 <img class="img-fluid" src="${album.album.cover_big}"><h6 class="text-white album-title mt-1">${album.album.title}</h6></div>
                 <div class="mb-4 text-center">`
