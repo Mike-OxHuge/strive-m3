@@ -1,4 +1,4 @@
-console.log(sarah)
+console.log("sarah");
 
 var trendingQuery = [];
 var trendingAlbums = [];
