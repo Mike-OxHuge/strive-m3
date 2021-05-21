@@ -98,23 +98,25 @@ function dynamic() {
   </div>
 </div>`
 
-let table = document.querySelector('table')
-table.innerHTML = `<tr><td>Title of song</td></tr>` // to be changed dynamically below when I can get access
+  let table = document.querySelector('table')
+  table.innerHTML = `<tr><td>Title of song</td></tr>` // to be changed dynamically below when I can get access
 
-var chosenAlbum = [];
+  function thisAlbum() {
+    fetch (albumInfo.tracklist, {mode: 'no-cors'})
+.then((res)=>res.json())
+.then((data) => console.log(data))
 
-function thisAlbum() {
-fetch(`${albumInfo.tracklist}`)
-  .then((res) => res.json())
-  .then((track) => {
-    chosenTracks = track.data;
-    console.log(chosenTracks)
-  })
-  .then(() => console.log("hello"))
-  .catch((err) => console.log(err));
-}
+  // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
+  //   .then((res) => res.json())
+  //   .then((track) => {
+  //     chosenTracks = track.data;
+  //     console.log(chosenTracks)
+  //   })
+    .then(() => console.log("hello"))
+    .catch((err) => console.log(err));
+  }
 
-thisAlbum()
+  thisAlbum()
 
   // export default savedId;
   // window.location.href = "/album-page/album-page.html";
