@@ -38,9 +38,10 @@ function populate() {
   dynamicRender.forEach((el) => el.addEventListener("click", dynamic));
 }
 function dynamic() {
-  // document.getElementById("container").innerHTML = "BALLS";
-  console.log(this);
-  // this.innerHTML = "<h1>clicked</h1>";
+  var savedId = this.id;
+  console.log(savedId);
+  export default { savedId, trendingAlbums };
+  window.location.href = "../album-page/album-page";
 }
 
 window.onload = function () {
