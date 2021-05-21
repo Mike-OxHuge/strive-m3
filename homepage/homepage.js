@@ -40,8 +40,8 @@ function populate() {
 function dynamic() {
   var savedId = this.id;
   console.log(savedId);
-  export default { savedId, trendingAlbums };
-  window.location.href = "../album-page/album-page";
+  // export default savedId;
+  window.location.href = "/album-page/album-page.html";
 }
 
 window.onload = function () {

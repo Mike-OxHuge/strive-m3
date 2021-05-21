@@ -1,6 +1,6 @@
+import { savedId, trendingAlbums } from "../homepage/homepage";
+console.log(savedId);
 window.onload = function () {
-  import { savedId, trendingAlbums } from "../homepage/homepage";
-
   console.log(trendingAlbums);
   console.log(savedId);
   // later populate from an array
