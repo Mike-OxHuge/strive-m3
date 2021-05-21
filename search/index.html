@@ -53,7 +53,21 @@
 .nav-item{
     border: none;
 }
-    
+
+.artist-container{
+    border: 1px solid black;
+    -webkit-box-shadow: 2px 2px 18px 2px #000000; 
+box-shadow: 2px 2px 18px 2px #000000;
+    width: 400px;
+    height: 200px;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    background: rgb(37, 70, 110);
+}
+    .sample:hover{
+        background-color:grey;
+        cursor: pointer;
+    }
 </style>
 
 
@@ -92,7 +106,7 @@
                     pl-1
                     py-2
                   "
-                  href="homepage.html"
+                  href="../homepage/homepage.html"
                 >
                   <img src="../sbar-ftr-images/home.png" alt="" class="icon" />
                   <span class="h6 mb-0">Home</span>
@@ -193,10 +207,16 @@
           class="container main-content-header d-flex"
           style="max-width: 100%"
         >
-          <h1>Browse all</h1>
+          <h1 class="hidden">Browse all</h1>
         </div>
         <div class="mb-3"></div>
         <section id="home-cards">
+            <div class="artist">
+                <div class="row artist-row">
+            
+                </div>
+            </div>
+
             <div class="container">
                 <div class="row album-row">
                     <!-- render from api -->
