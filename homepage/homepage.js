@@ -4,7 +4,7 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
   .then((res) => res.json())
   .then((queen) => {
     trendingQuery = queen.data;
-    console.log(trendingQuery)
+    console.log(trendingQuery);
   })
   .then(() => populate())
   .catch((err) => console.log(err));
@@ -39,10 +39,12 @@ function dynamic() {
   var savedId = this.id;
   console.log("ID of this album is: " + savedId);
 
-  let albumInfo = trendingAlbums.find(element => element.id === parseInt(savedId))
-  console.log('Get album tracks from: ' + albumInfo.tracklist)
+  let albumInfo = trendingAlbums.find(
+    (element) => element.id === parseInt(savedId)
+  );
+  console.log("Get album tracks from: " + albumInfo.tracklist);
 
-  document.getElementById('main-content').innerHTML = `
+  document.getElementById("main-content").innerHTML = `
   <div class="album-container">
   <div class="row">
     <div class="col-6 mt-4" id="artist-infos">
@@ -96,27 +98,28 @@ function dynamic() {
   </div>
     </div>
   </div>
-</div>`
+</div>`;
 
-  let table = document.querySelector('table')
-  table.innerHTML = `<tr><td>Title of song</td></tr>` // to be changed dynamically below when I can get access
+  let table = document.querySelector("table");
+  table.innerHTML = `<tr><td>Title of song</td></tr>`; // to be changed dynamically below when I can get access
 
   function thisAlbum() {
-    fetch (albumInfo.tracklist, {mode: 'no-cors'})
-.then((res)=>res.json())
-.then((data) => console.log(data))
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${savedId}/`)
+      .then((res) => res.json())
 
-  // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
-  //   .then((res) => res.json())
-  //   .then((track) => {
-  //     chosenTracks = track.data;
-  //     console.log(chosenTracks)
-  //   })
-    .then(() => console.log("hello"))
-    .catch((err) => console.log(err));
+      .then((tracklist) => console.log(tracklist.tracks.data))
+
+      // fetch(`https://api.deezer.com/album/${savedId}/tracks`, {mode: 'no-cors'})
+      //   .then((res) => res.json())
+      //   .then((track) => {
+      //     chosenTracks = track.data;
+      //     console.log(chosenTracks)
+      //   })
+      .then(() => console.log("hello"))
+      .catch((err) => console.log(err));
   }
 
-  thisAlbum()
+  thisAlbum();
 
   // export default savedId;
   // window.location.href = "/album-page/album-page.html";
