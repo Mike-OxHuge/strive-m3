@@ -3,11 +3,11 @@
 window.onload = function () {
   //
 };
-
+let users = [];
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((resp) => resp.json())
   .then((data) => {
-    var users = data;
+    users = data;
     populate(users);
   });
 
@@ -50,3 +50,53 @@ function selector(users) {
     })
   );
 }
+// Ex3) Create a function that, from the list of users, extracts only the names
+let button = document.getElementById("button");
+button.onclick = function () {
+  userList.innerHTML = "";
+  users.map((user) => (userList.innerHTML += `<li>${user.name}</li>`));
+};
+
+// Ex4) Create a function that, from the list of users,
+// creates an array of addresses as string and not as an object. Like:
+// {
+// "street": "Victor Plains",
+// "suite": "Suite 879",
+// "city": "Wisokyburgh",
+// "zipcode": "90566-7771",
+// "geo": {
+//   "lat": "-43.9509",
+//   "lng": "-34.4618"
+// }
+// Should become Victor Plains, Suite 879, Wisokyburgh (90566-7771)
+function addresses() {
+  userList.innerHTML = "";
+  let arrayOfAddresses = [];
+  users.forEach((user) => arrayOfAddresses.push(user.address));
+  arrayOfAddresses.map(
+    (adr) =>
+      (userList.innerHTML += `<li>${adr.street}, ${adr.suite}, ${adr.city}, ${adr.zipcode},
+    ${adr.geo.lat}/${adr.geo.lng} </li>`)
+  );
+}
+// Ex5) Add a button that sorts the list by name ascending / descending (ONE button)
+let sortingButton = document.getElementById("sorting-button");
+let isSorted = false;
+sortingButton.onclick = function sort() {
+  let sign = document.createElement("h2");
+  userList.innerHTML = "";
+  if (isSorted) {
+    users.sort((a, b) => a - b);
+    users.map((user) => (userList.innerHTML += `<li>${user.name}</li>`));
+    isSorted = !isSorted;
+    sortingButton.innerText = "Sort A-Z";
+    sign.innerText = "Currently sorted Counter-Alphabetically";
+  } else {
+    users.sort((a, b) => b - a);
+    users.map((user) => (userList.innerHTML += `<li>${user.name}</li>`));
+    isSorted = !isSorted;
+    sortingButton.innerText = "Sort Z-A";
+    sign.innerText = "Currently sorted Alphabetically";
+  }
+  userList.prepend(sign);
+};
