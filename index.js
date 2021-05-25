@@ -17,24 +17,32 @@ fetch("https://jsonplaceholder.typicode.com/users")
 // the user based on the input and on the value of the select.
 // Es.: select on NAME. Filter input = Glenna, only user id number 9 should remain
 let options = document.querySelectorAll("#inputGroupSelect01 option");
+let userInput = document.getElementById("userInput").value;
+let userList = document.getElementById("users-list");
 
 function populate(users) {
-  let userList = document.getElementById("users-list");
   for (let i = 0; i < users.length; i++) {
     let li = document.createElement("li");
     li.innerText = `Name: ${users[i].name}, Username: ${users[i].username}, email: ${users[i].email}`;
     userList.appendChild(li);
   }
-  console.log(users);
-
-  options.forEach((option) => option.addEventListener("click", selector));
+  selector(users);
 }
-
 function selector(users) {
-  var thisID = this.id;
-  let userInput = document.getElementById("userInput").value;
-  console.log("this id", thisID);
-  console.log(users);
-  console.log("user input", userInput);
-  //   const filteredArray = users.filter((user) => user.name === "userInput");
+  options.forEach((option) =>
+    option.addEventListener("click", (option) => {
+      let filtredArray = users.filter(
+        (user) =>
+          String(user.name).toLowerCase() === String(userInput).toLowerCase()
+      );
+      userList.innerHTML = "";
+      let li = document.createElement("li");
+      li.innerText = filtredArray[0].name;
+      userList.appendChild(li);
+      console.log(filtredArray);
+      console.log(users);
+      console.log("user input", userInput);
+      console.log(option.target.id);
+    })
+  );
 }
