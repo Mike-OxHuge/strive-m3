@@ -16,8 +16,8 @@ fetch("https://jsonplaceholder.typicode.com/users")
 // Create then a filter. When the user types in something, you should filter
 // the user based on the input and on the value of the select.
 // Es.: select on NAME. Filter input = Glenna, only user id number 9 should remain
-let options = document.querySelectorAll("#inputGroupSelect01 option");
-let userInput = document.getElementById("userInput").value;
+let options = document.querySelectorAll("#select_filter option");
+// let userInput = document.getElementById("userInput").value;
 let userList = document.getElementById("users-list");
 
 function populate(users) {
@@ -30,10 +30,11 @@ function populate(users) {
 }
 function selector(users) {
   options.forEach((option) =>
-    option.addEventListener("click", (option) => {
+  option.addEventListener("click", (option) => {
+    let userInput = document.getElementById("userInput").value;
       let filtredArray = users.filter(
         (user) =>
-          String(user.name).toLowerCase() === String(userInput).toLowerCase()
+          String(user[option.target.id]).toLowerCase().includes(String(userInput).toLowerCase())
       );
       userList.innerHTML = "";
       let li = document.createElement("li");
