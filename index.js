@@ -30,20 +30,23 @@ function populate(users) {
 }
 function selector(users) {
   options.forEach((option) =>
-  option.addEventListener("click", (option) => {
-    let userInput = document.getElementById("userInput").value;
-      let filtredArray = users.filter(
-        (user) =>
-          String(user[option.target.id]).toLowerCase().includes(String(userInput).toLowerCase())
+    option.addEventListener("click", (option) => {
+      let userInput = document.getElementById("userInput").value;
+      let filtredArray = users.filter((user) =>
+        String(user[option.target.id])
+          .toLowerCase()
+          .includes(String(userInput).toLowerCase())
       );
       userList.innerHTML = "";
-      let li = document.createElement("li");
-      li.innerText = filtredArray[0].name;
-      userList.appendChild(li);
-      console.log(filtredArray);
-      console.log(users);
-      console.log("user input", userInput);
-      console.log(option.target.id);
+      for (let i = 0; i < filtredArray.length; i++) {
+        let li = document.createElement("li");
+        li.innerText = filtredArray[i][option.target.id];
+        userList.appendChild(li);
+      }
+      //   console.log(filtredArray);
+      //   console.log(users);
+      //   console.log("user input", userInput);
+      //   console.log(option.target.id);
     })
   );
 }
