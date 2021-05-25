@@ -1,3 +1,2 @@
-The live upload works for the master branch.
-
-To see live changes on develop branch visit:
+Live upload:
+https://strive-m3-day7.netlify.app/
