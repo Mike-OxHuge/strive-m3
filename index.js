@@ -27,16 +27,14 @@ function populate(users) {
   }
   console.log(users);
 
-  options.forEach((option) =>
-    option.addEventListener("click", selector(users))
-  );
+  options.forEach((option) => option.addEventListener("click", selector));
 }
 
 function selector(users) {
   var thisID = this.id;
   let userInput = document.getElementById("userInput").value;
   console.log("this id", thisID);
-  console.log(populate(users));
+  console.log(users);
   console.log("user input", userInput);
   //   const filteredArray = users.filter((user) => user.name === "userInput");
 }
