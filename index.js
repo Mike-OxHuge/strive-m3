@@ -38,7 +38,7 @@ const gameStart = function () {
     </div>
     <button class="btn btn-primary" type="button" id='checker'>Check the number</button>
     `;
-    let randomNumber = Math.ceil(Math.random(a) * b);
+    const randomNumber = Math.ceil(Math.random(a) * b);
     document.getElementById("checker").addEventListener("click", (x, y, z) => {
       let guess = document.getElementById("guesser");
       let attempt = Number(guess.value);
