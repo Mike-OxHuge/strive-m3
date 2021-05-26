@@ -51,9 +51,9 @@ const gameStart = function () {
         playfield.innerHTML = `
         <div class='container' style='max-width: 100%'>
           <h1>CONGRATS! YOU WON!</h1>
-          <h2>Claim your prize: <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=43s'>here</a></h2>
+          <h2>Claim your prize: >>> <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=43s'>here</a> <<<</h2>
         </div>
-        <button class="btn btn-warning" type="button" id='restart'>Restart the game</button>
+        <button class="btn btn-warning mt-5" type="button" id='restart'>Restart the game</button>
         `;
         document
           .getElementById("restart")
