@@ -45,7 +45,6 @@ const gameStart = function () {
       x = a;
       y = b;
       z = randomNumber;
-      console.log(z);
       if (attempt > randomNumber) {
         alert(`Your number ${attempt} is greater than random number`);
       } else if (attempt === randomNumber) {
