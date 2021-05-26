@@ -60,5 +60,11 @@ const handleSubmit = async (event) => {
       "Content-Type": "application/json",
       Authorization: apiKey,
     },
-  });
+  })
+    .then(
+      document
+        .querySelectorAll("form div > input")
+        .forEach((el) => (el.value = ""))
+    )
+    .then(alert("Item has been added!"));
 };
