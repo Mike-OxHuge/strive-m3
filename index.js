@@ -38,13 +38,14 @@ const gameStart = function () {
     </div>
     <button class="btn btn-primary" type="button" id='checker'>Check the number</button>
     `;
-    let randomNumber = Math.floor(Math.random(a + 1) * b);
+    let randomNumber = Math.ceil(Math.random(a) * b);
     document.getElementById("checker").addEventListener("click", (x, y, z) => {
       let guess = document.getElementById("guesser");
       let attempt = Number(guess.value);
       x = a;
       y = b;
       z = randomNumber;
+      console.log(z);
       if (attempt > randomNumber) {
         alert(`Your number ${attempt} is greater than random number`);
       } else if (attempt === randomNumber) {
@@ -53,10 +54,17 @@ const gameStart = function () {
           <h1>CONGRATS! YOU WON!</h1>
           <h2>Claim your prize: <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=43s'>here</a></h2>
         </div>
+        <button class="btn btn-warning" type="button" id='restart'>Restart the game</button>
         `;
+        document
+          .getElementById("restart")
+          .addEventListener("click", restartTheGame);
       } else {
         alert(`Your number ${attempt} is lower than random number`);
       }
     });
   });
 };
+function restartTheGame() {
+  location.reload();
+}
