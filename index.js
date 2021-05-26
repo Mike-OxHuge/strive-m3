@@ -16,18 +16,19 @@ window.onload = async function () {
   const pureKey = await key.access_token;
   apiKey = "Bearer " + pureKey;
 
-  // this is the fetch what will populate main pageS
-  await fetch("https://striveschool-api.herokuapp.com/api/product/", {
-    headers: {
-      Authorization: apiKey,
-    },
-  })
-    .then((res) => res.json())
-    .then((data) =>
-      data.forEach((phone) => {
-        let col = document.createElement("div");
-        col.classList.add("col-3");
-        col.innerHTML = `
+  // this is the fetch what will populate main page
+  if (window.location.pathname === "/catalog.html") {
+    await fetch("https://striveschool-api.herokuapp.com/api/product/", {
+      headers: {
+        Authorization: apiKey,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) =>
+        data.forEach((phone) => {
+          let col = document.createElement("div");
+          col.classList.add("col-3");
+          col.innerHTML = `
 <div class="card">
     <img class="card-img-top img-fluid" src="${phone.imageUrl}" 
     alt="${phone.brand} ${phone.name}">
@@ -38,9 +39,10 @@ window.onload = async function () {
         </div>
 </div>
         `;
-        row.appendChild(col);
-      })
-    );
+          row.appendChild(col);
+        })
+      );
+  }
 };
 
 const handleSubmit = async (event) => {
