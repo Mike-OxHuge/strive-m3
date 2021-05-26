@@ -33,7 +33,7 @@ window.onload = async function () {
         <div class="card-body">
             <h5 class="card-title">${phone.brand} ${phone.name}</h5>
             <p class="card-text">${phone.description}</p>
-            <span class="btn btn-primary">But today for ${phone.price}</span>
+            <span class="btn btn-primary">But today for US$${phone.price}</span>
         </div>
 </div>
         `;
