@@ -27,13 +27,13 @@ window.onload = async function () {
         let col = document.createElement("div");
         col.classList.add("col-3");
         col.innerHTML = `
-<div class="card"">
-    <img class="card-img-top" src="${phone.imageUrl}" alt="${phone.brand} ${phone.name}"
-    style='max-width: 200px; max-height: 200px'>
+<div class="card">
+    <img class="card-img-top img-fluid" src="${phone.imageUrl}" 
+    alt="${phone.brand} ${phone.name}">
         <div class="card-body">
             <h5 class="card-title">${phone.brand} ${phone.name}</h5>
             <p class="card-text">${phone.description}</p>
-            <span class="btn btn-primary">But today for US$${phone.price}</span>
+            <span class="btn btn-primary">Buy today for US$${phone.price}</span>
         </div>
 </div>
         `;
