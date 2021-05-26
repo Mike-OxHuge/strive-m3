@@ -16,6 +16,7 @@ window.onload = async function () {
   const pureKey = await key.access_token;
   apiKey = "Bearer " + pureKey;
 
+  // this is the fetch what will populate main pageS
   await fetch("https://striveschool-api.herokuapp.com/api/product/", {
     headers: {
       Authorization: apiKey,

@@ -22,59 +22,70 @@
     <h1>Hello, world!</h1>
     <h2>Today we are going to add stuff to our API</h2>
     <h3>And display it <a href="./catalog.html">here</a></h3>
-    <form onsubmit="handleSubmit(event)">
-      <div class="form-group">
-        <label for="name">Model</label>
-        <input
-          type="text"
-          class="form-control"
-          id="name"
-          aria-describedby="name"
-          placeholder="Enter the name"
-        />
-      </div>
+    <p>
+      All the fields are required so don't fool around and spam my API with
+      empty data
+    </p>
+    <div class="container d-flex justify-content-center">
+      <form onsubmit="handleSubmit(event)" style="width: 60%">
+        <div class="form-group">
+          <label for="name">Model</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="name"
+            placeholder="Enter the name"
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input
-          type="text"
-          class="form-control"
-          id="description"
-          placeholder="Enter the description"
-        />
-      </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="Enter the description"
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="brand">Brand</label>
-        <input
-          type="text"
-          class="form-control"
-          id="brand"
-          placeholder="Enter the brand"
-        />
-      </div>
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="brand"
+            placeholder="Enter the brand"
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="imageUrl">Image URL</label>
-        <input
-          type="url"
-          class="form-control"
-          id="imageUrl"
-          placeholder="https://picsum.photos/400/400?random=69"
-        />
-      </div>
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input
+            required
+            type="url"
+            class="form-control"
+            id="imageUrl"
+            placeholder="https://picsum.photos/400/400?random=69"
+          />
+        </div>
 
-      <div class="form-group">
-        <label for="price">Price, $</label>
-        <input
-          type="number"
-          class="form-control"
-          id="price"
-          placeholder="Enter the price"
-        />
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <div class="form-group">
+          <label for="price">Price, $</label>
+          <input
+            required
+            type="number"
+            class="form-control"
+            id="price"
+            placeholder="Enter the price"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
