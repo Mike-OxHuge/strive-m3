@@ -28,7 +28,6 @@ const gameStart = function () {
   gameBegin.addEventListener("click", (a, b) => {
     a = Number(document.getElementById("startingPoint").value);
     b = Number(document.getElementById("endingPoint").value);
-    console.log(a, b);
     playfield.innerHTML = "";
     playfield.innerHTML = `
     <div class="input-group mb-3">
@@ -60,8 +59,4 @@ const gameStart = function () {
       }
     });
   });
-  // console.log(startingPoint.value, endingPoint.value)
 };
-// const randomizer = function (a, b) {
-//   console.log(a, b);
-// };
