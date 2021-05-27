@@ -42,7 +42,7 @@ const gameStart = function () {
       z = randomNumber;
       if (attempt > randomNumber) {
         document.getElementById("results").innerHTML = `
-        <div class="alert alert-danger fadeInLeft" role="alert">
+        <div class="alert alert-danger fadeInLeft my-4" role="alert">
         Your number ${attempt} is greater than random number</div>`;
       } else if (attempt === randomNumber) {
         playfield.innerHTML = `
@@ -58,7 +58,7 @@ const gameStart = function () {
           .addEventListener("click", restartTheGame);
       } else {
         document.getElementById("results").innerHTML = `
-        <div class="alert alert-danger fadeInRight" role="alert">
+        <div class="alert alert-warning fadeInRight my-4" role="alert">
         Your number ${attempt} is smaller than random number</div>`;
       }
     });
