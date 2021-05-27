@@ -3,9 +3,9 @@
 
 let username = "mikelitoris34@icloud.com";
 let password = "bollocks69";
+const row = document.getElementById("row");
 
 window.onload = async function () {
-  const row = document.getElementById("row");
   const keyRequest = await fetch(
     `https://striveschool-api.herokuapp.com/api/account/login?username=${username}&password=${password}`,
     {
@@ -14,7 +14,8 @@ window.onload = async function () {
   );
   const key = await keyRequest.json();
   const pureKey = await key.access_token;
-  apiKey = "Bearer " + pureKey;
+  let apiKey = "Bearer " + pureKey;
+  localStorage.setItem("apiKey", apiKey);
 
   // this is the fetch what will populate main page
   if (window.location.pathname === "/catalog.html") {
@@ -36,6 +37,7 @@ window.onload = async function () {
             <h5 class="card-title">${phone.brand} ${phone.name}</h5>
             <p class="card-text">${phone.description}</p>
             <span class="btn btn-primary">Buy today for US$${phone.price}</span>
+            <a  href='./details.html?id=${phone._id}' class="btn btn-warning">Edit the item</a>
         </div>
 </div>
         `;

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <h2>Today we are going edit/delete stuff from our API</h2>
+    <h3>And display it <a href="./catalog.html">here</a></h3>
+    <div class="container d-flex justify-content-center flex-column">
+      <div id="field">
+        <!-- alert message in here -->
+      </div>
+      <form onsubmit="handleSubmit(event)" style="width: 60%">
+        <div class="form-group">
+          <label for="name">Model</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="name"
+            aria-describedby="name"
+            placeholder="Enter the name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="description"
+            placeholder="Enter the description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input
+            required
+            type="text"
+            class="form-control"
+            id="brand"
+            placeholder="Enter the brand"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="imageUrl">Image URL</label>
+          <input
+            required
+            type="url"
+            class="form-control"
+            id="imageUrl"
+            placeholder="https://picsum.photos/400/400?random=69"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="price">Price, $</label>
+          <input
+            required
+            type="number"
+            class="form-control"
+            id="price"
+            placeholder="Enter the price"
+          />
+        </div>
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="button" id="deleteButton" class="btn btn-danger">
+            Delete
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      let params = new URL(document.location).searchParams;
+      let itemId = params.get("id");
+      const url = "https://striveschool-api.herokuapp.com/api/product/";
+      let apiKey = localStorage.getItem("apiKey");
+      window.onload = async () => {
+        const response = await fetch(url + itemId, {
+          method: "GET",
+          headers: {
+            Authorization: apiKey,
+          },
+        });
+        const item = await response.json();
+        document.getElementById("name").value = item.name;
+        document.getElementById("description").value = item.description;
+        document.getElementById("brand").value = item.brand;
+        document.getElementById("imageUrl").value = item.imageUrl;
+        document.getElementById("price").value = item.price;
+        // document.getElementById("field").innerHTML = `
+        //     <div class="alert alert-danger" role="alert" style='max-width:50%'>
+        //         Item with an id ${itemId} has been deleted.
+        //     </div>
+        //     `;
+        const deleting = async () => {
+          console.log(item);
+          console.log(itemId);
+        };
+      };
+    </script>
+  </body>
+</html>
