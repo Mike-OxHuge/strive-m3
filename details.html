@@ -112,6 +112,7 @@
       let itemId = params.get("id");
       const url = "https://striveschool-api.herokuapp.com/api/product/";
       let apiKey = localStorage.getItem("apiKey");
+
       window.onload = async () => {
         const response = await fetch(url + itemId, {
           method: "GET",
@@ -125,15 +126,52 @@
         document.getElementById("brand").value = item.brand;
         document.getElementById("imageUrl").value = item.imageUrl;
         document.getElementById("price").value = item.price;
-        // document.getElementById("field").innerHTML = `
-        //     <div class="alert alert-danger" role="alert" style='max-width:50%'>
-        //         Item with an id ${itemId} has been deleted.
-        //     </div>
-        //     `;
-        const deleting = async () => {
-          console.log(item);
-          console.log(itemId);
+        document
+          .getElementById("deleteButton")
+          .addEventListener("click", deleting);
+      };
+
+      const deleting = async () => {
+        await fetch(url + itemId, {
+          method: "DELETE",
+          headers: {
+            Authorization: apiKey,
+          },
+        });
+        document.getElementById("field").innerHTML = `
+            <div class="alert alert-danger" role="alert" style='max-width:50%'>
+                Item with an id ${itemId} has been deleted.<br/>
+                You'll be redirected to catalog page in 1 seconds.
+            </div>
+            `;
+        setTimeout(() => (window.location = "./catalog.html"), 1000);
+      };
+
+      const handleSubmit = async (event) => {
+        event.preventDefault();
+        let myObj = {
+          name: document.getElementById("name").value, //REQUIRED
+          description: document.getElementById("description").value, //REQUIRED
+          brand: document.getElementById("brand").value, //REQUIRED
+          imageUrl: document.getElementById("imageUrl").value, //REQUIRED
+          price: document.getElementById("price").value, //REQUIRED
         };
+
+        await fetch(url + itemId, {
+          method: "PUT",
+          body: JSON.stringify(myObj),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: apiKey,
+          },
+        });
+        document.getElementById("field").innerHTML = `
+            <div class="alert alert-danger" role="alert" style='max-width:50%'>
+                Item with an id ${itemId} has been updated. <br/>
+                You'll be redirected to catalog page in 1 seconds.
+            </div>
+            `;
+        setTimeout(() => (window.location = "./catalog.html"), 1000);
       };
     </script>
   </body>

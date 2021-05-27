@@ -14,7 +14,7 @@ window.onload = async function () {
   );
   const key = await keyRequest.json();
   const pureKey = await key.access_token;
-  let apiKey = "Bearer " + pureKey;
+  apiKey = "Bearer " + pureKey;
   localStorage.setItem("apiKey", apiKey);
 
   // this is the fetch what will populate main page
