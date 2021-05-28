@@ -28,7 +28,7 @@ window.onload = async function () {
     .then((genres) => {
       for (let i = 0; i < genres.length - 3; i++) {
         document.getElementById("genres-dropdown").innerHTML += `
-        <a class="dropdown-item" href="./homepage/?genre=${genres[i]}">
+        <a class="dropdown-item" href="./index.html?genre=${genres[i]}">
         <span style='text-transform: capitalize'>${genres[i]}</span>
         </a>`;
       }
@@ -36,6 +36,44 @@ window.onload = async function () {
   populatingCarousel("trending");
   populatingCarousel("watch it again");
   populatingCarousel("new releases");
+  selectedGenre();
+};
+
+const selectedGenre = async () => {
+  let params = new URL(document.location).searchParams;
+  let genre = params.get("genre");
+  const response = await fetch(
+    `https://striveschool-api.herokuapp.com/api/movies/${genre}`,
+    {
+      headers: {
+        Authorization: apiKey,
+      },
+    }
+  );
+  const selectedGenre = await response.json();
+  let row = document.createElement("div");
+  row.classList.add("row", "container", "justify-content-center");
+  row.style.maxWidth = "100vw";
+  let mainContainer = document.getElementById("main-container");
+  mainContainer.innerHTML = "";
+  mainContainer.appendChild(row);
+
+  selectedGenre.forEach((movie) => {
+    let col = document.createElement("div");
+    col.classList.add("col-3", "mx-auto");
+    col.innerHTML = `
+    <div class="card my-3">
+      <img class="card-img-top img-fluid" src=${movie.imageUrl} alt="Card image cap"
+      style='max-height: 20vh'>
+        <div class="card-body">
+          <h5 class="card-title">${movie.name}</h5>
+          <p class="card-text">${movie.description}</p>
+          <a href="#" class="btn btn-primary">${movie.category}</a>
+        </div>
+    </div>
+    `;
+    row.appendChild(col);
+  });
 };
 
 const populatingCarousel = async (genre) => {

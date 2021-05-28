@@ -58,6 +58,11 @@ footer li {
 .carousel-control-prev,
 .carousel-control-next {
   width: max-content;
+  position: relative;
+}
+.carousel-control-next {
+  left: 90vw;
+  right: 0;
 }
 
 .carousel-item .row {
