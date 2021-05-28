@@ -1,3 +1,65 @@
 body {
-  background-color: gray;
+  background-color: #010101;
+}
+.navBar {
+  background-color: rgb(14, 14, 14);
+  max-height: 60px;
+}
+.tvGenres {
+  margin-left: 0px;
+  padding-top: 20px;
+}
+
+.genresButton {
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 14, 14);
+}
+
+body {
+  background-color: rgb(14, 14, 14);
+}
+
+.tvText {
+  color: white;
+}
+.viewButton {
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 14, 14);
+  max-height: 30px;
+  padding-top: 0;
+}
+.carousel-item img {
+  opacity: 0.7;
+}
+.carousel-item img:hover {
+  transform: scale(1.2);
+  opacity: 1;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.serviceCode {
+  color: rgb(255, 255, 255);
+  background-color: rgb(14, 14, 14);
+  margin-bottom: 15px;
+}
+li {
+  list-style: none;
+}
+a {
+  color: white;
+}
+.avatarDrop {
+  border: none;
+}
+footer li {
+  margin-bottom: 15px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: max-content;
+}
+
+.carousel-item .row {
+  position: relative;
 }
